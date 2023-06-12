@@ -1,0 +1,14 @@
+# fly.toml app configuration file generated for eleahburmanportfolio on 2023-06-12T19:08:43-04:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "eleahburmanportfolio"
+primary_region = "ewr"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
