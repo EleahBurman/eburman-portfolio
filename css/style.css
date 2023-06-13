@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  --navy: rgb(18,31,43);
+  --navy: rgb(13, 48, 82);
   --teal: rgb(10, 157, 168);
   background-color: var(--teal);
   color: rgb(255,255,255);
@@ -183,6 +183,8 @@ main {
 .project {
   position: relative;
   margin: 20px;
+  width: 500px;
+  height: 265px;
 }
 
 .screenshot {
@@ -206,6 +208,8 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  width: 500px;
+  height: 265px;
 }
 
 .project:hover .card-overlay {
@@ -378,41 +382,21 @@ main {
   margin: 16px;
 }
 
-.footer-icon {
+.footer-icon{
   width: 40px;
-  margin: 5px;
 }
 
-.lift {
-  transition: ease 0.5s;
-}
-
-.lift:hover {
-  transform: translateY(-5px);
-}
-
-.resume {
-  max-width: 70%;
+.footer-icon:hover{
+  color: white;
 }
 
 .email,
 .github,
 .linkedin{
   margin-bottom: 0;
-
 }
 
 .footer-words{
   margin-top: 0;
-}
-.email:hover {
-  filter: brightness(120%);
-}
-
-.github:hover{
-  filter: brightness(120%);
-}
-
-.linkedin:hover{
-  filter: brightness(120%);
+  color: white;
 }
