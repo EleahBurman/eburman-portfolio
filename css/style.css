@@ -180,12 +180,17 @@ main {
   margin: 10px
 }
 
+#portfolio.screenshot{
+  border: solid white 1px;
+}
+
 .project {
   position: relative;
   margin: 20px;
   width: 500px;
   height: 255px;
 }
+
 
 .screenshot {
   width: 500px;
