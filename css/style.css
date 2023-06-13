@@ -184,16 +184,21 @@ main {
   position: relative;
   margin: 20px;
   width: 500px;
-  height: 265px;
+  height: 255px;
 }
 
 .screenshot {
   width: 500px;
+  height: 255px;
   border-radius: 8px;
 }
 
 
 .card-overlay {
+  width: 500px;
+  max-width: 500px;
+  height: 255px;
+  max-height: 255px;
   position: absolute;
   top: 0;
   left: 0;
@@ -208,8 +213,6 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 500px;
-  height: 265px;
 }
 
 .project:hover .card-overlay {
