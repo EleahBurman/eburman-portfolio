@@ -450,8 +450,9 @@ main {
 
   .dropdown-nav {
     align-items: center;
-    background-color: #334b61;
-    border: 1px solid #617b93;
+    background-color: var(--teal);
+    border: rgb(16, 214, 228);
+    color: white;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -471,7 +472,6 @@ main {
     text-align: center;
     text-decoration: none;
   }
-
 
   .section {
     width: 90%;
@@ -509,25 +509,32 @@ main {
   }
 
   .project-badge {
-    height: 2rem
+    height: 2rem;
   }
 
   .about-image {
     width: 50%;
     min-width: 250px;
+    height: auto; /* Added to maintain aspect ratio */
   }
 
   .about-text {
     width: 70%;
   }
-  .bg-image{
-    width: 50%;
+
+  .bg-image {
+    width: 100%;
+    height: 100%;
   }
-  .resume-icon{
+
+  .resume-icon {
     width: 50%;
+    margin: 0 auto; /* Center horizontally */
+    display: block; /* Added to override any default inline behavior */
   }
 }
 
+/* Rest of your media queries */
 @media screen and (max-width: 610px) {
   html {
     font-size: 14px;
