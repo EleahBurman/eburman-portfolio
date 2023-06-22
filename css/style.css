@@ -472,9 +472,6 @@ main {
     text-decoration: none;
   }
 
-  #home {
-    background-image: url(../assets/images/bg-image.jpeg);
-  }
 
   .section {
     width: 90%;
@@ -521,7 +518,13 @@ main {
   }
 
   .about-text {
-    width: 70%
+    width: 70%;
+  }
+  .bg-image{
+    width: 50%;
+  }
+  .resume-icon{
+    width: 50%;
   }
 }
 
