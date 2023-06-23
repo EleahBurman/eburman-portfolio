@@ -79,8 +79,9 @@ main {
 .bg-image {
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;
-  background-position: top;
+  width: 800px;
+  height: 497px;
+  background-position: center;
 }
 
 .header {
@@ -106,7 +107,6 @@ main {
 }
 
 .header-links {
-  padding: 10px;
   display: flex;
   flex-direction: row;
   gap: 10px
@@ -235,8 +235,6 @@ main {
 .card-overlay:hover {
   opacity: 1;
 }
-
-
 
 .project-title {
   width: 100%;
@@ -371,11 +369,6 @@ main {
   padding: 20px;
 }
 
-.about-image {
-  width: 300px;
-  border-radius: 60%;
-}
-
 .about-text {
   text-align: center;
   font-size: 1.17em;
@@ -426,7 +419,13 @@ main {
   color: white;
 }
 
-@media screen and (max-width: 768px) {
+.about-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: px) {
   .full-nav {
     display: none;
   }
@@ -513,18 +512,16 @@ main {
   }
 
   .about-image {
-    width: 50%;
-    min-width: 250px;
-    height: auto; /* Added to maintain aspect ratio */
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
   }
-
-  .about-text {
-    width: 70%;
-  }
-
+  
   .bg-image {
-    width: 100%;
-    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
   }
 
   .resume-icon {
