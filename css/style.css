@@ -22,7 +22,8 @@ body {
   font-family: Barlow, sans-serif;
 }
 
-nav {
+
+#nav-computer {
   background-color: var(--teal);
   display: flex;
   flex-direction: row;
@@ -38,11 +39,6 @@ nav {
 }
 
 
-nav > div {
-  padding: 15px 10px;
-  font-size: large;
-}
-
 .nav-link {
   color: rgb(255,255,255);
   text-decoration: none;
@@ -54,6 +50,11 @@ nav > div {
 .nav-link:hover {
   color: var(--navy);
   background-color: white;
+}
+
+nav > div {
+  padding: 15px 10px;
+  font-size: large;
 }
 
 main {
@@ -425,46 +426,60 @@ main {
   border-radius: 50%;
 }
 
-@media screen and (max-width: px) {
-  .full-nav {
+.menu-button {
+  display: none;
+}
+
+#navbar {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  #nav-computer{
     display: none;
   }
 
   .menu-button {
+    display: flex;
+    justify-content: center;
     align-items: center;
     background: none;
     border: none;
     color: #fff;
-    display: flex;
     font-size: 32px;
     height: 48px;
-    justify-content: center;
     margin: 10px 8px;
     position: fixed;
-    right: 0;
     top: 0;
     width: 48px;
     z-index: 2;
   }
 
-  .dropdown-nav {
+  #navbar.open {
+    display: flex;
+  }
+
+  .navbar {
+    max-width: 768px;
+    display: none;
     align-items: center;
     background-color: var(--teal);
-    border: rgb(16, 214, 228);
     color: white;
-    display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     gap: 8px;
     justify-content: center;
     padding: 64px 32px 24px;
     position: fixed;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
     top: 0;
     z-index: 1;
   }
 
-  .dropdown-nav > a {
+  .navbar.open {
+    display: flex;
+  }
+
+  .navbar a {
     color: #fff;
     font-size: 20px;
     padding: 8px 16px;

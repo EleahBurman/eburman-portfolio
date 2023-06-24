@@ -9,8 +9,7 @@ let deleting = false;
 const rolesEl = document.getElementById('roles');
 const scrollEl = document.querySelectorAll('.scroll');
 const menuBtn = document.querySelector('.menu-button');
-const nav = document.querySelector('nav');
-const navLinks = document.querySelectorAll('nav a');
+const navbar = document.getElementById('navbar');
 
 /*------------ Event Listeners ------------*/
 scrollEl.forEach((el) => {
@@ -18,36 +17,40 @@ scrollEl.forEach((el) => {
     e.preventDefault();
     document.querySelector(el.getAttribute('href')).scrollIntoView({
       behavior: 'smooth',
-    })
-  })
-})
+    });
+    closeNavbar();
+  });
+});
 
-menuBtn.addEventListener('click', (e) => {
-  nav.classList.toggle('full-nav')
-  nav.classList.toggle('dropdown-nav')
-  e.currentTarget.classList.toggle('open')
-  if (e.currentTarget.classList.contains('open')) {
-    e.currentTarget.innerHTML = 'X'
-  } else {
-    e.currentTarget.innerHTML = '≡'
+menuBtn.addEventListener('click', () => {
+  toggleNavbar();
+});
+
+navbar.addEventListener('click', (e) => {
+  if (e.target.tagName === 'A') {
+    closeNavbar();
   }
-})
-
-navLinks.forEach((link) => {
-  link.addEventListener('click', () => {
-    if (window.innerWidth > 768) return;
-    nav.classList.toggle('full-nav')
-    nav.classList.toggle('dropdown-nav')
-    menuBtn.classList.toggle('open')
-    menuBtn.innerHTML = '≡'
-  })
-})
+});
 
 /*------------ Functions ------------*/
-init();
+function toggleNavbar() {
+  navbar.classList.toggle('open');
+  menuBtn.classList.toggle('open');
+  if (navbar.classList.contains('open')) {
+    menuBtn.innerHTML = 'X';
+  } else {
+    menuBtn.innerHTML = '≡';
+  }
+}
+
+function closeNavbar() {
+  navbar.classList.remove('open');
+  menuBtn.classList.remove('open');
+  menuBtn.innerHTML = '≡';
+}
 
 function init() {
-  typeText()
+  typeText();
 }
 
 function typeText() {
@@ -78,3 +81,6 @@ function typeText() {
     }
   }
 }
+
+/*------------ Initialization ------------*/
+init();
