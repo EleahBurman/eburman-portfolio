@@ -458,25 +458,39 @@ main {
     display: flex;
   }
 
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li{
+    margin-bottom: 20px;
+  }
+
   .navbar {
     max-width: 768px;
     display: none;
     align-items: center;
-    background-color: var(--teal);
+    background-color: rgba(128, 128, 128, 0.6);
     color: white;
     flex-direction: column;
     gap: 8px;
     justify-content: center;
-    padding: 64px 32px 24px;
+    padding: 74px 22px 14px;
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
     top: 0;
     z-index: 1;
+    margin:0;
   }
-
-  .navbar.open {
-    display: flex;
+  
+  .home:hover,
+  .about:hover,
+  .services:hover,
+  .contact:hover {
+    text-decoration: underline;
   }
 
   .navbar a {
