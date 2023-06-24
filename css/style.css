@@ -68,7 +68,7 @@ main {
 .intro {
   width: 100%;
   margin-top: 60px;
-  height: calc(100vh - 60px);
+  height: auto;
   position: relative;
   color: white;
   display: flex;
@@ -78,6 +78,7 @@ main {
 }
 
 .bg-image {
+  background-image: url("../assets/images/eleah-background-banner.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   width: 800px;
@@ -438,6 +439,23 @@ main {
     display: none;
   }
 
+  .bg-image{
+    background-image: url("../assets/images/eleah-banner.png");
+    background-size: 60%;
+    width: 100%;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .bg-image img{
+    border: 2px solid black;
+  }
+
+  .intro{
+    margin-top: 0;
+    padding-top: 0;
+  }
+
   .menu-button {
     display: flex;
     justify-content: center;
@@ -447,7 +465,7 @@ main {
     color: #fff;
     font-size: 32px;
     height: 48px;
-    margin: 10px 8px;
+    margin: 10px;
     position: fixed;
     top: 0;
     width: 48px;
@@ -546,13 +564,6 @@ main {
     width: 250px;
     height: 250px;
     border-radius: 50%;
-  }
-  
-  .bg-image {
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
   }
 
   .resume-icon {
