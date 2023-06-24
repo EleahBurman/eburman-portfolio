@@ -474,12 +474,15 @@ main {
 
   #navbar.open {
     display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    text-align: center;
   }
 
   li{
