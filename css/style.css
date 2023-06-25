@@ -443,6 +443,11 @@ main {
   display: none;
 }
 
+.title {
+  border-bottom: 2px solid var(--navy);
+  text-align: center;
+}
+
 #navbar {
   display: none;
 }
@@ -586,16 +591,19 @@ main {
 
   .resume-icon {
     width: 50%;
-    margin: 0 auto; /* Center horizontally */
-    display: block; /* Added to override any default inline behavior */
+    margin: 0 auto;
+    display: block;
   }
 
   .header{
     padding-top: 50px;
   }
+  
+  .title{
+    margin-left: 5%;
+  }
 }
 
-/* Rest of your media queries */
 @media screen and (max-width: 610px) {
   html {
     font-size: 14px;
@@ -611,11 +619,19 @@ main {
   .projects-container{
     margin-left: 15%;
   }
+  .title {
+    border-bottom: 2px solid var(--navy);
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 535px) {
   html {
     font-size: 12px;
+  }
+  .title {
+    border-bottom: 2px solid var(--navy);
+    text-align: center;
   }
 }
 
@@ -623,17 +639,39 @@ main {
   html {
     font-size: 11px;
   }
+  .title {
+    border-bottom: 2px solid var(--navy);
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 435px) {
   html {
     font-size: 10px;
   }
+  .title {
+    border-bottom: 2px solid var(--navy);
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  html {
+    font-size: 9px;
+  }
+  .title {
+    border-bottom: 2px solid var(--navy);
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 395px) {
   html {
     font-size: 9px;
+  }
+  .title {
+    border-bottom: 2px solid var(--navy);
+    text-align: center;
   }
 }
 
@@ -643,5 +681,9 @@ main {
   }
   .footer-icon{
     width: 30px;
+  }
+  .title {
+    border-bottom: 2px solid var(--navy);
+    text-align: center;
   }
 }
