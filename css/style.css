@@ -78,12 +78,19 @@ main {
 }
 
 .bg-image {
-  background-image: url("../assets/images/eleah-background-banner.png");
+  background-image: url("../assets/images/eleah-banner.png");
+  background-size: 60%;
+  width: 100%;
+  margin-top: 0;
+  padding-top: 0;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  width: 800px;
-  height: 497px;
+  justify-content: center;
+  align-items: center;
   background-position: center;
+}
+
+.bg-image img{
+  margin-left: 20%;
 }
 
 .header {
@@ -91,7 +98,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 300px;
+  padding-top: 550px;
 }
 
 #name {
@@ -446,11 +453,9 @@ main {
     margin-top: 0;
     padding-top: 0;
   }
-
-  .bg-image img{
-    border: 2px solid black;
+  .header{
+    padding-top: 400px;
   }
-
   .intro{
     margin-top: 0;
     padding-top: 0;
@@ -512,8 +517,8 @@ main {
   .skills:hover,
   .resume:hover,
   .contact:hover {
-    text-decoration: underline;
     background-color: rgba(128, 128, 128, 0.8);
+    font-weight: bold;
   }
 
   .navbar a {
@@ -580,6 +585,14 @@ main {
 @media screen and (max-width: 610px) {
   html {
     font-size: 14px;
+  }
+
+  .bg-image {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .header{
+    padding-top: 250px;
   }
 }
 
