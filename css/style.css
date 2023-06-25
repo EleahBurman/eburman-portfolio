@@ -623,6 +623,10 @@ main {
     border-bottom: 2px solid var(--navy);
     text-align: center;
   }
+  .footer {
+    padding: 0;
+    margin: 10px;
+  }
 }
 
 @media screen and (max-width: 535px) {
