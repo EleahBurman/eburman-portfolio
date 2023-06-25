@@ -442,6 +442,9 @@ main {
   display: none;
 }
 @media screen and (max-width: 768px) {
+  .projects-container{
+    margin-left: 10%;
+  }
   #nav-computer{
     display: none;
   }
@@ -594,6 +597,9 @@ main {
   .header{
     padding-top: 250px;
   }
+  .projects-container{
+    margin-left: 15%;
+  }
 }
 
 @media screen and (max-width: 535px) {
@@ -617,5 +623,14 @@ main {
 @media screen and (max-width: 395px) {
   html {
     font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .projects-container{
+    margin-left: 5%;
+  }
+  .footer-icon{
+    width: 30px;
   }
 }
