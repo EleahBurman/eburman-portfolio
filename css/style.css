@@ -78,19 +78,24 @@ main {
 }
 
 .bg-image {
-  background-image: url("../assets/images/eleah-banner.png");
-  background-size: 60%;
-  width: 100%;
+  size-adjust: 6;
   margin-top: 0;
   padding-top: 0;
   background-repeat: no-repeat;
   justify-content: center;
   align-items: center;
   background-position: center;
+  width: 100%;
 }
 
-.bg-image img{
-  margin-left: 20%;
+.banner{
+  width: 500px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 0;
 }
 
 .header {
@@ -98,7 +103,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 550px;
+  padding-top: 50px;
 }
 
 #name {
@@ -449,16 +454,18 @@ main {
     display: none;
   }
 
-  .bg-image{
-    background-image: url("../assets/images/eleah-banner.png");
-    background-size: 60%;
-    width: 100%;
-    margin-top: 0;
-    padding-top: 0;
+  .banner{
+  width: 300px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 0;
+  margin-top: 50px;
   }
-  .header{
-    padding-top: 400px;
-  }
+
+
   .intro{
     margin-top: 0;
     padding-top: 0;
@@ -582,6 +589,10 @@ main {
     margin: 0 auto; /* Center horizontally */
     display: block; /* Added to override any default inline behavior */
   }
+
+  .header{
+    padding-top: 50px;
+  }
 }
 
 /* Rest of your media queries */
@@ -595,7 +606,7 @@ main {
     padding-top: 0;
   }
   .header{
-    padding-top: 250px;
+    padding-top: 20px;
   }
   .projects-container{
     margin-left: 15%;
