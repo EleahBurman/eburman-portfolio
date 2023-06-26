@@ -204,6 +204,7 @@ main {
 
 #portfolio.screenshot{
   border: solid white 1px;
+  background-color: rgb(10, 129, 138);
 }
 
 .project {
@@ -344,6 +345,10 @@ main {
   padding: 0px;
 }
 
+.resume-icon:hover{
+  box-shadow: 0px 0px 2px 2px rgb(255, 255, 255);
+  background-color: rgb(8, 122, 130);
+}
 .plain {
   font-size: 1.17em;
   text-align: center;
@@ -625,7 +630,7 @@ main {
   }
   .footer {
     padding: 0;
-    margin: 10px;
+    margin: 12px;
   }
 }
 
