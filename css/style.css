@@ -163,6 +163,44 @@ main {
   padding: 0 10px;
 }
 
+.badge {
+  border-radius: 8px;
+  height: 40px;
+  margin: 10px;
+}
+
+.badge:hover{
+  box-shadow: 0px 0px 2px 2px rgb(255, 255, 255);
+  height: 40px;
+}
+
+.hidden{
+  display: none;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.filter-button {
+  background-color: white;
+  border: none;
+  padding: 8px 16px;
+  margin: 0 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  height: 40px;
+  transition: background-color 0.3s ease;
+  font-size: 18px;
+}
+
+.filter-button.active {
+  background-color: #007bff;
+  color: white;
+}
+
 .skills-container {
   display: flex;
   flex-wrap: wrap;
@@ -181,20 +219,13 @@ main {
   padding: 10px;
 }
 
-.badge {
-  border-radius: 8px;
-  height: 40px;
-  margin: 10px;
-}
-
-.badge:hover{
-  box-shadow: 0px 0px 2px 2px rgb(255, 255, 255);
-}
-
 .project-badge:hover{
   box-shadow: 0px 0px 2px 2px rgb(255, 255, 255);
 }
 
+.filter-button:hover{
+  box-shadow: 0px 0px 2px 2px var(--navy);
+}
 .projects-list {
   display: flex;
   flex-direction: column;

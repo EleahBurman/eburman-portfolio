@@ -83,4 +83,4 @@ function typeText() {
 }
 
 /*------------ Initialization ------------*/
-init();
+init()
