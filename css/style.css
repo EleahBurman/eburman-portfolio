@@ -500,8 +500,14 @@ main {
   .projects-container{
     margin-left: 10%;
   }
+
   #nav-computer{
     display: none;
+    justify-content: right;
+  }
+
+  .filter-button{
+    font-size: 8px;
   }
 
   .banner{
@@ -521,16 +527,18 @@ main {
     padding-top: 0;
   }
 
-  .menu-button {
+  .menu-button, 
+  .menu-button.open{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: right;
+    align-items: right;
     background: none;
     border: none;
     color: #fff;
     font-size: 32px;
     height: 48px;
     margin: 10px;
+    margin-left: 60%;
     position: fixed;
     top: 0;
     width: 48px;
@@ -539,8 +547,9 @@ main {
 
   #navbar.open {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: right;
+    align-items: right;
+    margin-left: 20%;
   }
 
   ul {
