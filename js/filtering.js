@@ -1,5 +1,5 @@
-const filterButtons = document.querySelectorAll('.filter-button');
-const skillBadges = document.querySelectorAll('.badge');
+const filterButtons = document.querySelectorAll('.filter-button')
+const skillBadges = document.querySelectorAll('.badge')
 
 function filterBadges(filter) {
   skillBadges.forEach(badge => {
@@ -10,18 +10,21 @@ function filterBadges(filter) {
       badge.style.display = 'none'
       badge.classList.add('hidden')
     }
-  });
+  })
 }
 
 // Initially, show all badges
-filterBadges('all');
+filterBadges('all')
 
 filterButtons.forEach(button => {
   button.addEventListener('click', function () {
-    const selectedFilter = this.getAttribute('data-filter'); // Changed variable name
-    console.log("Button clicked:", selectedFilter); // Debugging log
-    filterButtons.forEach(btn => btn.classList.remove('active'));
-    this.classList.add('active');
-    filterBadges(selectedFilter); // Use the new variable name
-  });
-});
+     // Changed variable name
+    const selectedFilter = this.getAttribute('data-filter')
+    // Debugging log
+    console.log("Button clicked:", selectedFilter)
+    filterButtons.forEach(btn => btn.classList.remove('active'))
+    this.classList.add('active')
+     // Use the new variable name
+    filterBadges(selectedFilter)
+  })
+})
