@@ -125,6 +125,12 @@ main {
   gap: 10px
 }
 
+#top{
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
+}
+
 .page-link {
   color: rgb(255,255,255);
   text-decoration: none;
@@ -527,8 +533,7 @@ main {
     padding-top: 0;
   }
 
-  .menu-button, 
-  .menu-button.open{
+  .menu-button{
     display: flex;
     justify-content: right;
     align-items: right;
