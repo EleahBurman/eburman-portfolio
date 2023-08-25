@@ -19,8 +19,32 @@ scrollEl.forEach((el) => {
       behavior: 'smooth',
     });
     closeNavbar();
+    window.scrollTo({
+      top: 0, // Scroll to the top
+      behavior: 'smooth',
+    });
+  });
+
+  el.addEventListener('focus', (e) => {
+    el.style.backgroundColor = 'white';
+    el.style.color = 'var(--teal)';
+  });
+
+  el.addEventListener('blur', (e) => {
+    el.style.backgroundColor = 'transparent';
+    el.style.color = 'rgb(255, 255, 255)';
   });
 });
+
+// Add this event listener to remove focus when at the top
+window.addEventListener('scroll', () => {
+  if (document.body.scrollTop <= 0 && document.documentElement.scrollTop <= 0) {
+    scrollEl.forEach((el) => {
+      el.blur(); // Remove focus
+    });
+  }
+});
+
 
 menuBtn.addEventListener('click', () => {
   toggleNavbar();

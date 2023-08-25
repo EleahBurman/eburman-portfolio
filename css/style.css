@@ -145,6 +145,11 @@ main {
   background-color: white;
 }
 
+.page-link:focus {
+  color: var(--navy);
+  background-color: white;
+}
+
 .section {
   padding: 40px 0px;
   display: flex;
