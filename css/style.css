@@ -39,6 +39,15 @@ body {
   margin-left: 10%;
 }
 
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
 input#input-box{
   width: 150px;
   border-radius: 20px;
@@ -48,6 +57,14 @@ input#input-box{
   padding-right: 20px;
 }
 
+input#input-box::after {
+  content: '|'; /* The cursor character */
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  animation: blink 1s infinite;
+}
 input#input-box:focus,
 input#input-box:active,
 input#input-box:focus-within {
