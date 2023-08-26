@@ -51,6 +51,7 @@ body {
 input#input-box{
   width: 150px;
   height: 20px;
+  z-index: 1;
   border-radius: 8px 0 0 8px;
   background-color: var(--darkteal);
   color: white;
@@ -72,10 +73,6 @@ input#input-box::after {
 input#input-box:focus,
 input#input-box:active,
 input#input-box:focus-within {
-  background-color: var(--lightteal);
-}
-
-.search-button:hover{
   background-color: var(--lightteal);
 }
 
@@ -147,10 +144,11 @@ input#input-box:focus::placeholder {
   height: 20px;
   border: 0px;
   padding: 0px;
+  right: 15px;
+  z-index: 2;
 }
 
 .search-button{
-  position: sticky;
   border-radius: 0 8px 8px 0;
   width: 20px;
 }
