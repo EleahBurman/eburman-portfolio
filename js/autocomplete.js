@@ -22,6 +22,7 @@ const availableKeywords = [
   'HTML',
   'PostgreSQL',
   'Django',
+  'Amazon Web Services',
 ];
 
 const resultsBox = document.querySelector(".result-box");
@@ -40,9 +41,9 @@ searchButton.addEventListener("click", function () {
 });
 
 inputBox.addEventListener("input", function () {
-  const input = inputBox.value.toLowerCase();
+  const input = inputBox.value.toUpperCase();
   const matchingKeywords = availableKeywords.filter((keyword) =>
-  keyword.toLowerCase().indexOf(input) !== -1
+  keyword.toUpperCase().indexOf(input) !== -1
   );
   display(matchingKeywords);
 
@@ -70,29 +71,58 @@ function selectInput(list, keyword) {
 }
 
 // Perform the search, scroll, and apply highlighting
+function scrollToElement(element) {
+  const parentSection = element.closest(".section");
+  if (parentSection) {
+    parentSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.classList.add("brighten");
+  }
+}
+
 function search() {
-  const keyword = inputBox.value.trim().toLowerCase();
-
+  const keyword = inputBox.value.trim().toUpperCase();
   if (keyword.length) {
-    const elementsToSearch = document.querySelectorAll(".scroll, .badge.languages, .screenshot");
-
-    elementsToSearch.forEach((element) => {
-      const content = element.textContent.toLowerCase();
-      const altContent = element.getAttribute("alt") ? element.getAttribute("alt").toLowerCase() : "";
-
-      if (content.includes(keyword) || altContent.includes(keyword)) {
-        const parentSection = element.closest(".section");
-        if (parentSection) {
-          parentSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          element.classList.add("brighten");
-        }
-      } else {
-        element.classList.remove("brighten");
-      }
-    });
+    searchImage(keyword);
+    searchText(keyword);
   } else {
     resetHighlights();
   }
+}
+
+// Perform the search and apply highlighting for images
+function searchImage(keyword) {
+  const elementsToSearch = document.querySelectorAll(".scroll, .badge, .languages, .screenshot");
+
+  elementsToSearch.forEach((element) => {
+    const altContent = element.getAttribute("alt") ? element.getAttribute("alt").toUpperCase() : "";
+
+    if (altContent.includes(keyword)) {
+      element.classList.add("brighten")
+      scrollToElement(element);
+    } else {
+      element.classList.remove("brighten");
+    }
+  });
+}
+
+// Perform the search and apply highlighting for text
+function searchText(keyword) {
+  const elementsToSearch = document.querySelectorAll(".about-text, .project-description");
+
+  elementsToSearch.forEach((element) => {
+    const content = element.textContent;
+    const words = content.split(' '); // Split text into words
+
+    const highlightedWords = words.map((word) => {
+      if (word.toUpperCase().includes(keyword)) {
+        return `<span class="yellowbackground">${word}</span>`;
+      } else {
+        return word;
+      }
+    });
+
+    element.innerHTML = highlightedWords.join(' ');
+  });
 }
 
 // Reset all highlights
