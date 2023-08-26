@@ -63,6 +63,7 @@ clearButton.addEventListener("click", function () {
   clearHighlightedWords();
   clearButton.style.display = "none";
   inputBox.focus();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
 // Handle search result selection and scrolling
