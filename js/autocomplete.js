@@ -11,15 +11,17 @@ const availableKeywords = [
   'MongoDB',
   'Node.JS',
   'Github',
+  'Git',
   'Docker',
   'Azure',
+  'Visual Studio Code',
   'VSCode',
   'Vite',
   'JWT',
   'MUI',
   'HTML',
   'PostgreSQL',
-  'Django'
+  'Django',
 ];
 
 const resultsBox = document.querySelector(".result-box");
@@ -78,7 +80,7 @@ function search() {
       const content = element.textContent.toLowerCase();
       const altContent = element.getAttribute("alt") ? element.getAttribute("alt").toLowerCase() : "";
 
-      if (content.includes(keyword) || altContent.includes(keyword) || (keyword.length === 3 && content.indexOf(keyword) !== -1)) {
+      if (content.includes(keyword) || altContent.includes(keyword)) {
         const parentSection = element.closest(".section");
         if (parentSection) {
           parentSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
