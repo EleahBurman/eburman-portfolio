@@ -108,7 +108,8 @@ input#input-box:focus::placeholder {
 }
 
 .yellowbackground{
-  background-color: rgb(255, 221, 0);
+  background-color: rgb(250, 169, 38);
+  color: var(--navy)
 }
 
 .clear-button {

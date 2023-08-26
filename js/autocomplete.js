@@ -49,6 +49,7 @@ inputBox.addEventListener("input", function () {
 
   if (!input) {
     resetHighlights();
+    clearHighlightedWords();
     clearButton.style.display = "none";
   } else {
     clearButton.style.display = "inline-block";
@@ -59,6 +60,7 @@ clearButton.addEventListener("click", function () {
   inputBox.value = "";
   resultsBox.innerHTML = "";
   resetHighlights();
+  clearHighlightedWords();
   clearButton.style.display = "none";
   inputBox.focus();
 });
@@ -86,6 +88,7 @@ function search() {
     searchText(keyword);
   } else {
     resetHighlights();
+    clearHighlightedWords();
   }
 }
 
@@ -130,6 +133,18 @@ function resetHighlights() {
   const highlightedElements = document.querySelectorAll(".brighten");
   highlightedElements.forEach((element) => {
     element.classList.remove("brighten");
+  });
+}
+
+// Function to clear highlighted words in text content
+function clearHighlightedWords() {
+  const highlightedTextElements = document.querySelectorAll(".about-text, .project-description");
+
+  highlightedTextElements.forEach((element) => {
+    const words = element.querySelectorAll('.yellowbackground');
+    words.forEach((word) => {
+      word.classList.remove("yellowbackground");
+    });
   });
 }
 
