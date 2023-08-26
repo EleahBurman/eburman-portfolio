@@ -11,6 +11,8 @@ html {
 body {
   --navy: rgb(13, 48, 82);
   --teal: rgb(10, 157, 168);
+  --lightteal: rgb(98, 204, 211);
+  --darkteal: rgb(0, 123, 132);
   background-color: var(--teal);
   color: rgb(255,255,255);
   font-family: 'Roboto', sans-serif;
@@ -33,10 +35,99 @@ body {
   position: fixed;
   top: 0;
   padding-top: 10px;
-  padding-bottom: 10px;
   z-index: 1;
+  margin-left: 10%;
 }
 
+input#input-box{
+  width: 150px;
+  border-radius: 20px;
+  background-color: var(--teal);
+  color: white;
+  padding-left: 10px;
+  padding-right: 20px;
+}
+
+input#input-box:focus,
+input#input-box:active,
+input#input-box:focus-within {
+  background-color: var(--lightteal);
+}
+
+.search-button{
+  border-radius: 20px;
+  background-color: var(--teal);
+  color: white;
+  border-color: white 2px;
+  width:40px;
+  padding: 1px 2px;
+  cursor: pointer;
+}
+
+.search-button:hover{
+  background-color: var(--lightteal);
+}
+
+.search-button:active{
+  background-color: white;
+  color: var(--teal);
+}
+
+::placeholder{
+  color: var(--navy);
+}
+
+input#input-box:focus::placeholder {
+  color: transparent;
+}
+
+.result-box ul{
+  border-radius: 20px;
+  padding: 0px 10px;
+  font-size: 16px;
+}
+
+.result-box ul li{
+  list-style: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.result-box ul li:hover{
+  background-color: var(--lightteal);
+}
+
+.result-box{
+  max-height: 100px;
+  overflow-y: scroll;
+}
+
+.brighten,
+.brighten-background {
+  filter: brightness(1.5);
+  box-shadow: 0px 0px 2px 2px rgb(255, 255, 255);
+}
+
+.bright-background {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.clear-button {
+  display: none;
+  background: none;
+  border: none;
+  color: #ccc;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.clear-button:focus {
+  outline: none;
+}
+
+#input-box:not(:placeholder-shown) ~ .clear-button {
+  display: inline-block;
+}
 
 .nav-link {
   color: rgb(255,255,255);
@@ -561,6 +652,12 @@ main {
     justify-content: right;
     align-items: right;
     margin-left: 20%;
+    margin-top: 50px;
+    padding: 20px 10px 10px 10px;
+  }
+
+  #navbar li a{
+    font-size: 12px; 
   }
 
   ul {
@@ -578,12 +675,11 @@ main {
     max-width: 768px;
     display: none;
     align-items: center;
-    background-color: rgba(128, 128, 128, 0.6);
+    background-color: var(--darkteal);
     color: white;
     flex-direction: column;
     gap: 8px;
     justify-content: center;
-    padding: 74px 22px 14px;
     position: fixed;
     left: 50%;
     transform: translateX(-50%);

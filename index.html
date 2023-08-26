@@ -5,7 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
+  <script defer src="https://kit.fontawesome.com/869241c010.js" crossorigin="anonymous"></script>
   <script defer src="./js/app.js"></script>
+  <script defer src="./js/autocomplete.js"></script>
   <link
   id="favicon"
   rel="icon"
@@ -18,30 +20,41 @@
 <body>
   <nav id="nav-computer">
     <div>
-      <a class="nav-link scroll" href="#home">Home</a>
+      <a class="nav-link scroll" href="#home"><i class="fa-solid fa-house"></i> Home</a>
     </div>
     <div>
-      <a class="nav-link scroll" href="#projects">Projects</a>
+      <a class="nav-link scroll" href="#projects"><i class="fa-solid fa-diagram-project"></i> Projects</a>
     </div>
     <div>
-      <a class="nav-link scroll" href="#skills">Skills</a>
+      <a class="nav-link scroll" href="#skills"><i class="fa-solid fa-rocket"></i> Skills</a>
     </div>
     <div>
-      <a class="nav-link scroll" href="#resume">Resume</a>
+      <a class="nav-link scroll" href="#resume"><i class="fa-solid fa-file"></i> Resume</a>
     </div>
     <div>
-      <a class="nav-link scroll" href="#about">About</a>
+      <a class="nav-link scroll" href="#about"><i class="fa-solid fa-person-dress"></i> About</a>
     </div>
+
+    <div class="search-box">
+      <div class="row">
+        <input type="text" id="input-box" placeholder="ex Python" autocomplete="off">
+        <button class="clear-button hidden" aria-label="Clear" tabindex="0">&times;</button>
+        <button class="search-button" onclick="search()"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+      <div class="result-box">
+      </div>
+    </div>
+    
   </nav>
 
   <button class="menu-button" onclick="toggleDropdown()">≡</button>
   <nav id="navbar" class="navbar">
     <ul id="nav-list" class="nav-list">
-      <li class="home"><a class="scroll" href="#home">Home</a></li>
-      <li class="about"><a class="scroll" href="#about">About</a></li>
-      <li class="Skills"><a class="scroll" href="#skills">Skills</a></li>
-      <li class="Resume"><a class="scroll" href="#resume">Resume</a></li>
-      <li class="contact"><a class="scroll" href="#contact">Contact</a></li>
+      <li class="home"><a class="scroll" href="#home"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li class="about"><a class="scroll" href="#projects"><i class="fa-solid fa-diagram-project"></i> Projects</a></li>
+      <li class="skills"><a class="scroll" href="#skills"><i class="fa-solid fa-rocket"></i> Skills</a></li>
+      <li class="resume"><a class="scroll" href="#resume"><i class="fa-solid fa-file"></i>  Resume</a></li>
+      <li class="about"><a class="scroll" href="#about"><i class="fa-solid fa-person-dress"></i> About</a></li>
     </ul>
   </nav>
   <main>
@@ -61,6 +74,7 @@
       </div>
     </section>
 
+
     <section id="projects" class="section">
       <p class="title"><span>Projects</span></p>
       <div class="projects-container">
@@ -78,10 +92,10 @@
               Unleash your passion for drag queens with this Python/Django application, designed to empower drag enthusiasts in curating their ultimate collection of favorite queens.
             </div>
             <div class="project-skills">
-              <a href="https://www.python.org/doc/"><img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python badge"  class="project-badge"></a>
-              <a href="https://docs.djangoproject.com/en/4.2/"><img src="https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white" alt="Django badge"  class="project-badge"></a>
-              <a href="https://www.postgresql.org/docs/"><img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL badge" class="project-badge"></a>
-              <a href="https://docs.aws.amazon.com/"><img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS badge" class="project-badge"></a>
+              <a href="https://www.python.org/doc/"><img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python"  class="project-badge"></a>
+              <a href="https://docs.djangoproject.com/en/4.2/"><img src="https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white" alt="Django"  class="project-badge"></a>
+              <a href="https://www.postgresql.org/docs/"><img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" class="project-badge"></a>
+              <a href="https://docs.aws.amazon.com/"><img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS" class="project-badge"></a>
             </div>
           </div>
         </div>
@@ -99,9 +113,9 @@
               Ignite your culinary creativity with our React-based group project, leveraging an API to curate customized recipe boards.
             </div>
             <div class="project-skills">
-              <a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started"><img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Badge" class="project-badge"></a>
-              <a href="https://nodejs.org/en/docs"><img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="Node badge" class="project-badge"></a>
-              <a href="https://www.mongodb.com/docs/"><img src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB badge" class="project-badge"></a>
+              <a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started"><img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" class="project-badge"></a>
+              <a href="https://nodejs.org/en/docs"><img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="Node" class="project-badge"></a>
+              <a href="https://www.mongodb.com/docs/"><img src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" class="project-badge"></a>
             </div>
           </div>
         </div>
@@ -119,9 +133,9 @@
               A word search using JavaScript, HTML, and CSS that awards the user a trophy depending on how many turns it takes for the user to find all the words.
             </div>
             <div class="project-skills">
-              <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript Badge" class="project-badge"></a>
-              <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"><img src="https://img.shields.io/badge/html5-E34F26?logo=html5&logoColor=white&style=for-the-badge" alt="HTML5 badge" class="project-badge"></a>
-              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3 badge" class="project-badge"></a>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript" class="project-badge"></a>
+              <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"><img src="https://img.shields.io/badge/html5-E34F26?logo=html5&logoColor=white&style=for-the-badge" alt="HTML5" class="project-badge"></a>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" class="project-badge"></a>
             </div>
           </div>
         </div>
@@ -202,7 +216,7 @@
         <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" class="badge languages" alt="JavaScript badge"></a>
         <a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started"><img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" class="badge languages" alt="React badge"></a>
         <a href="https://docs.djangoproject.com/en/4.2/"><img src="https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white" class="badge languages" alt="Django badge"></a>
-        <a href="https://docs.aws.amazon.com/"><img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white"  class="badge project-badge aws" alt="AWS badge"></a>
+        <a href="https://docs.aws.amazon.com/"><img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white"  class="badge project-badge aws" alt="AWS"></a>
         <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" class="badge languages" alt="CSS3 badge"></a>
         <a href="https://expressjs.com/"><img src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB" class="badge languages" alt="Express badge"></a>
         <a href="https://nodejs.org/en/docs"><img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" class="badge languages" alt="Node badge"></a>
