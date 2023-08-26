@@ -37,13 +37,18 @@
 
     <div class="search-box">
       <div class="row">
-        <input type="text" id="input-box" placeholder="ex Python" autocomplete="off">
-        <button class="clear-button hidden" aria-label="Clear" tabindex="0">&times;</button>
-        <button class="search-button" onclick="search()"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <div class="input-wrapper">
+          <input type="text" id="input-box" placeholder="ex Python" autocomplete="off">
+          <div class="button-wrapper">
+            <button class="clear-button hidden" aria-label="Clear" tabindex="0">X</button>
+            <button class="search-button" onclick="search()"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+        </div>
       </div>
       <div class="result-box">
       </div>
     </div>
+    
     
   </nav>
 
