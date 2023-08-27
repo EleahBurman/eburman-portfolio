@@ -61,15 +61,6 @@ navbar.addEventListener('click', (e) => {
 });
 
 /*------------ Functions ------------*/
-// function toggleNavbar() {
-//   navbar.classList.toggle('open');
-//   menuBtn.classList.toggle('open');
-//   if (navbar.classList.contains('open')) {
-//     menuBtn.innerHTML = 'X';
-//   } else {
-//     menuBtn.innerHTML = '≡';
-//   }
-// }
 
 function closeNavbar() {
   navbar.classList.remove('open');

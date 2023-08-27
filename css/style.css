@@ -665,6 +665,10 @@ main {
   display: none;
 }
 
+.phone-eb-logo{
+  display: none;
+}
+
 .title {
   border-bottom: 2px solid var(--navy);
   text-align: center;
@@ -720,6 +724,15 @@ main {
     top: 0;
     width: 48px;
     z-index: 2;
+    margin-bottom: 0;
+  }
+
+  .phone-eb-logo{
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    margin-right: 60%;
+    margin-bottom: 0;
   }
 
   #navbar.open {
