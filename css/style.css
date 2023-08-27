@@ -166,12 +166,17 @@ input#input-box:focus::placeholder {
   background-color: var(--lightteal);
 }
 
-.nav-link {
+.nav-link{
   color: rgb(255,255,255);
   text-decoration: none;
   padding: 8px 15px;
   border-radius: 20px;
   transition: ease 0.5s;
+}
+
+.eb-logo{
+  border-bottom: 20px;
+  padding-bottom: 15px;
 }
 
 .nav-link:hover {
@@ -491,6 +496,39 @@ main {
   align-items: center;
   justify-content: center;
 }
+
+/* new project css */
+.column-project{
+  display: flex;
+  flex-direction: column;
+}
+
+.new-column{
+  display:flex;
+  flex-direction: column;
+}
+
+.new-title{
+  display:flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.column-icon{
+  width: 24px;
+}
+
+.new-project-link{
+  color: white;
+  font-size: 36px;
+  text-decoration: none;
+}
+
+.project-github{
+  width: 36px;
+}
+/* end of new project css */
+
 
 .contact-resume-container {
   width: 100%;
