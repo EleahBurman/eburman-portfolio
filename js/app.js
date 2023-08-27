@@ -19,10 +19,6 @@ scrollEl.forEach((el) => {
       behavior: 'smooth',
     });
     closeNavbar();
-    window.scrollTo({
-      top: 0, // Scroll to the top
-      behavior: 'smooth',
-    });
   });
 
   el.addEventListener('focus', (e) => {
