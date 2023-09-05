@@ -101,5 +101,20 @@ function typeText() {
   }
 }
 
+// Add this event listener for selected project links
+const selectedProjects = document.querySelectorAll('.selected-project');
+
+selectedProjects.forEach((link) => {
+  link.addEventListener('click', (e) => {
+    // Remove 'selected' class from all selected project links
+    selectedProjects.forEach((otherLink) => {
+      otherLink.classList.remove('selected');
+    });
+
+    // Add 'selected' class to the clicked selected project link
+    link.classList.add('selected');
+  });
+});
+
 /*------------ Initialization ------------*/
 init()

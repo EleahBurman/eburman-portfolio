@@ -13,6 +13,7 @@ body {
   --teal: rgb(10, 157, 168);
   --lightteal: rgb(98, 204, 211);
   --darkteal: rgb(0, 123, 132);
+  --darkerteal: rgb(1, 97, 104);
   background-color: var(--teal);
   color: rgb(255,255,255);
   font-family: 'Roboto', sans-serif;
@@ -395,7 +396,8 @@ main {
   margin-top: 10px;
   display: none;
   position: absolute;
-  background-color: #fff;
+  background-color: var(--darkteal);
+  color: white;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
   z-index: 1;
@@ -406,11 +408,11 @@ main {
   padding: 12px 16px;
   text-decoration: none;
   display: block;
-  color: var(--navy);
+  color:white;
 }
 
 .projects-dropdown-content a:hover {
-  background-color: #f2f2f2;
+  background-color: var(--darkerteal)
 }
 
 .projects-dropdown:hover .projects-dropdown-content {
@@ -729,12 +731,12 @@ main {
     border: none;
     color: #fff;
     font-size: 32px;
-    height: 50px;
+    height: 48px;
     margin: 10px;
     margin-left: 60%;
     position: fixed;
     top: 0;
-    width: 50px;
+    width: 48px;
     z-index: 2;
     margin-bottom: 0;
   }
@@ -754,6 +756,7 @@ main {
     margin-left: 20%;
     margin-top: 50px;
     padding: 20px 10px 10px 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
   }
 
   #navbar li a{
@@ -769,6 +772,10 @@ main {
 
   li{
     margin-bottom: 20px;
+  }
+
+  .selected{
+    background-color: var(--darkerteal);
   }
 
   .navbar {
