@@ -903,6 +903,9 @@ main {
     border-bottom: 2px solid var(--navy);
     text-align: center;
   }
+  .github-project-img{
+    margin: 0px 5px 0px 38px;
+  }
 }
 
 @media screen and (max-width: 395px) {
@@ -916,6 +919,9 @@ main {
   .new-project-card-title{
   font-size:20px;
   }
+  .github-project-img{
+    margin: 0px 5px 0px 38px;
+  }
 }
 
 @media screen and (max-width: 360px) {
@@ -928,6 +934,12 @@ main {
   .title {
     border-bottom: 2px solid var(--navy);
     text-align: center;
+  }
+  .footer{
+    margin:8px;
+  }
+  .new-project-card-title{
+    font-size: 18px;
   }
 }
 
