@@ -111,7 +111,7 @@ function searchImage(keyword) {
 
 // Perform the search and apply highlighting for text
 function searchText(keyword) {
-  const elementsToSearch = document.querySelectorAll(".about-text, .project-description");
+  const elementsToSearch = document.querySelectorAll(".about-text, .new-project-description");
 
   elementsToSearch.forEach((element) => {
     const content = element.textContent;
@@ -139,7 +139,7 @@ function resetHighlights() {
 
 // Function to clear highlighted words in text content
 function clearHighlightedWords() {
-  const highlightedTextElements = document.querySelectorAll(".about-text, .project-description");
+  const highlightedTextElements = document.querySelectorAll(".about-text");
 
   highlightedTextElements.forEach((element) => {
     const words = element.querySelectorAll('.yellowbackground');
