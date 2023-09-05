@@ -867,6 +867,9 @@ main {
   .section {
     padding: 0;
   }
+  img.banner{
+    margin-top: 10px;
+  }
 }
 
 @media screen and (max-width: 535px) {
