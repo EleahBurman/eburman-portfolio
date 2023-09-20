@@ -452,7 +452,9 @@ main {
   background-color: #0d3051;
   width:54px;
   align-items: center;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
+
 .new-title{
   display:flex;
   flex-direction: row;
@@ -487,6 +489,7 @@ main {
 .new-screenshot{
   height:255px;
   width: 90%;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
 #cat-vs-catlady{
@@ -522,6 +525,7 @@ main {
   align-items: center;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
 .new-overlay:hover {
