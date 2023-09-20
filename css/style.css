@@ -234,6 +234,7 @@ main {
   align-items: center;
   margin: auto;
   margin-bottom: 0;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
 }
 
 .header {
@@ -717,14 +718,14 @@ main {
   }
 
   .banner{
-  width: 250px;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  margin-bottom: 0;
-  margin-top: 50px;
+    width: 250px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 0;
+    margin-top: 50px;
   }
 
 
