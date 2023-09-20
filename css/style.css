@@ -29,6 +29,7 @@ body {
   width: 20.25;
   height: 18.5;
 }
+
 #nav-computer {
   background-color: var(--teal);
   display: flex;
@@ -341,6 +342,7 @@ main {
   border-radius: 20px;
   border: 1px solid rgb(255,255,255);
   font-size: 1.25rem;
+  cursor: pointer;
 }
 
 .filter-button.active {
