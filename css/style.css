@@ -25,6 +25,10 @@ body {
   font-family: Barlow, sans-serif;
 }
 
+.project-new-icon{
+  width: 20.25;
+  height: 18.5;
+}
 #nav-computer {
   background-color: var(--teal);
   display: flex;
