@@ -185,7 +185,7 @@ input#input-box:focus::placeholder {
   padding-bottom: 15px;
 }
 
-.nav-link:hover {
+.nav-link:hover{
   color: var(--navy);
   background-color: white;
 }
@@ -487,9 +487,11 @@ main {
   margin-top:10px;
 }
 
-.new-screenshot{
-  height:255px;
-  width: 90%;
+.new-screenshot {
+  height: 255px; /* Set the desired height for all project screenshots */
+  width: 90%; /* Set the desired width for all project screenshots */
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
@@ -708,6 +710,7 @@ main {
     margin-left: 10%;
   }
 
+
   #nav-computer{
     display: none;
     justify-content: right;
@@ -823,10 +826,6 @@ main {
     text-decoration: none;
   }
 
-  .section {
-    width: 90%;
-    min-width: 300px;
-  }
   
   .badge {
     height: 2.5rem;
@@ -1010,6 +1009,13 @@ main {
   }
 }
 
+@media screen and (max-width: 375px){
+  .new-project-card-title{
+    margin-right: 0px;
+    font-size: 18px;
+  }
+}
+
 @media screen and (max-width: 360px) {
   .projects-container{
     margin-left: 5%;
@@ -1030,35 +1036,4 @@ main {
   .phone-eb-logo {
     margin-right: 62%;
 }
-}
-
-@media screen and (max-width: 768px) {
-  /* Styles for screens with a maximum width of 768px */
-  body {
-    font-size: 16px; /* Example font size adjustment */
-    padding: 10px; /* Example padding adjustment */
-    margin: 0 auto; /* Example margin adjustment */
-  }
-
-}
-
-@media screen and (max-width: 610px) {
-  /* Styles for screens with a maximum width of 610px */
-  body {
-    font-size: 14px; /* Example font size adjustment */
-    padding: 8px; /* Example padding adjustment */
-    margin: 0 auto; /* Example margin adjustment */
-  }
-
-
-}
-
-@media screen and (max-width: 535px) {
-  /* Styles for screens with a maximum width of 535px */
-  body {
-    font-size: 12px; /* Example font size adjustment */
-    padding: 6px; /* Example padding adjustment */
-    margin: 0 auto; /* Example margin adjustment */
-  }
-
 }
