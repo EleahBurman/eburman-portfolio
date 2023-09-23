@@ -30,15 +30,17 @@ scrollEl.forEach((el) => {
   });
 });
 
-// Add this event listener to remove focus when at the top
-window.addEventListener('scroll', () => {
-  if (document.body.scrollTop <= 0 && document.documentElement.scrollTop <= 0) {
+// Add this event listener to remove focus when at the menubtn
+window.addEventListener('scroll', (e) => {
+  if (
+    document.body.scrollTop <= 0 && document.documentElement.scrollTop <= 0 &&
+    !e.target.classList.contains('hamburger')
+  ) {
     scrollEl.forEach((el) => {
       el.blur();
     });
   }
 });
-
 
 /*------------ Functions ------------*/
 function init() {
