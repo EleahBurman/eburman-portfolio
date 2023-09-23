@@ -13,6 +13,7 @@
   <script defer src="./js/projects-dropdown.js"></script>
   <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script defer src="./js/projectDescriptionToggle.js"></script>
+  <script defer src="./js/hamburger.js"></script>
 
   <link
   id="favicon"
@@ -31,7 +32,7 @@
     </div>
     <div class="projects-dropdown">
       <a class="nav-link scroll" href="#projects">
-        <img src="./assets/images/icons/projects-icon.png" alt="" class="project-new-icon"> Projects <i class="fas fa-chevron-down"></i>
+        <img alt="" class="project-new-icon"> Projects <i class="fas fa-chevron-down"></i>
       </a>
       <div class="projects-dropdown-content">
         <!-- Project 1 -->
@@ -78,18 +79,20 @@
     
   </nav>
 
-  <img src="./assets/images/eb-square-logo.png" height="48" class="phone-eb-logo" alt="eb logo">
-  <button class="menu-button">≡</button>
-  <nav id="navbar" class="navbar">
-    <ul id="nav-list" class="nav-list">
-      <li class="home"><a class="scroll" href="#home"><i class="fa-solid fa-house"></i> Home</a></li>
-      <li class="about"><a class="scroll selected-project" href="#projects"> <i class="fa-solid fa-diagram-project"></i> Projects</a></li>
-      <li class="skills"><a class="scroll selected-project" href="#skills"><i class="fa-solid fa-rocket"></i> Skills</a></li>
-      <li class="resume"><a class="scroll selected-project" href="#resume"><i class="fa-solid fa-file"></i> Resume</a></li>
-      <li class="about"><a class="scroll selected-project" href="#about"><i class="fa-solid fa-person-dress"></i> About</a></li>
-    </ul>
-  </nav>
-  
+  <div class="container">
+    <img src="./assets/images/eb-square-logo.png" height="48" class="phone-eb-logo" alt="eb logo">
+    .
+    <button class="hamburger">
+      <div class="bar"></div>
+    </button>
+    <nav class="mobile-nav">
+        <a class="home scroll" href="#home"><i class="fa-solid fa-house"></i> Home</a>
+        <a class="about scroll selected-project" href="#projects"> <i class="fa-solid fa-diagram-project"></i> Projects</a>
+        <a class="skills scroll selected-project" href="#skills"><i class="fa-solid fa-rocket"></i> Skills</a>
+        <a class="resume scroll selected-project" href="#resume"><i class="fa-solid fa-file"></i> Resume</a>
+        <a class="about scroll selected-project" href="#about"><i class="fa-solid fa-person-dress"></i> About</a>
+    </nav>
+  </div>
   <main>
 
     <section id="home" class="intro">

@@ -8,8 +8,6 @@ let deleting = false;
 /*---- Cached Element References ----*/
 const rolesEl = document.getElementById('roles');
 const scrollEl = document.querySelectorAll('.scroll');
-const menuBtn = document.querySelector('.menu-button');
-const navbar = document.getElementById('navbar');
 
 /*------------ Event Listeners ------------*/
 scrollEl.forEach((el) => {
@@ -36,38 +34,13 @@ scrollEl.forEach((el) => {
 window.addEventListener('scroll', () => {
   if (document.body.scrollTop <= 0 && document.documentElement.scrollTop <= 0) {
     scrollEl.forEach((el) => {
-      el.blur(); // Remove focus
+      el.blur();
     });
   }
 });
 
 
-menuBtn.addEventListener('click', () => {
-  console.log("Menu button clicked")
-  navbar.classList.toggle('open');
-  menuBtn.classList.toggle('open');
-  if (navbar.classList.contains('open')) {
-    menuBtn.innerHTML = 'X';
-  } else {
-    menuBtn.innerHTML = '≡';
-  }
-});
-
-navbar.addEventListener('click', (e) => {
-  console.log("Navbar clicked")
-  if (e.target.tagName === 'A') {
-    closeNavbar();
-  }
-});
-
 /*------------ Functions ------------*/
-
-function closeNavbar() {
-  navbar.classList.remove('open');
-  menuBtn.classList.remove('open');
-  menuBtn.innerHTML = '≡';
-}
-
 function init() {
   typeText();
 }
