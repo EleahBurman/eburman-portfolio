@@ -17,7 +17,6 @@ scrollEl.forEach((el) => {
     document.querySelector(el.getAttribute('href')).scrollIntoView({
       behavior: 'smooth',
     });
-    closeNavbar();
   });
 
   el.addEventListener('focus', (e) => {
