@@ -43,11 +43,13 @@ scrollEl.forEach((el) => {
   });
 });
 
-// Add this event listener to remove focus when at the menubtn
+// Add this event listener to remove focus when not at the hamburger element
 window.addEventListener('scroll', (e) => {
+  const target = e.target || document.documentElement;
+  
   if (
-    document.body.scrollTop <= 0 && document.documentElement.scrollTop <= 0 &&
-    !e.target.menubtn('hamburger')
+    (document.body.scrollTop <= 0 || target.scrollTop <= 0) &&
+    (!target.classList || !target.classList.contains('hamburger'))
   ) {
     scrollEl.forEach((el) => {
       el.blur();
