@@ -156,6 +156,5 @@ function display(matchingKeywords) {
   });
 
   resultsBox.innerHTML = "<ul>" + content.join('') + "</ul>";
-  console.log(matchingKeywords, 'matchingkeywords');
 }
 

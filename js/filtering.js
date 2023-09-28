@@ -20,8 +20,6 @@ filterButtons.forEach(button => {
   button.addEventListener('click', function () {
      // Changed variable name
     const selectedFilter = this.getAttribute('data-filter')
-    // Debugging log
-    console.log("Button clicked:", selectedFilter)
     filterButtons.forEach(btn => btn.classList.remove('active'))
     this.classList.add('active')
      // Use the new variable name
