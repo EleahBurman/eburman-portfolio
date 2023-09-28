@@ -397,6 +397,7 @@ main {
 .projects-dropdown {
   position: relative;
   display: inline-block;
+  cursor: pointer;
 }
 
 .projects-dropdown-content {
