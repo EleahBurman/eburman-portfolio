@@ -47,7 +47,7 @@ scrollEl.forEach((el) => {
 window.addEventListener('scroll', (e) => {
   if (
     document.body.scrollTop <= 0 && document.documentElement.scrollTop <= 0 &&
-    !e.target.classList.contains('hamburger')
+    !e.target.menubtn('hamburger')
   ) {
     scrollEl.forEach((el) => {
       el.blur();
