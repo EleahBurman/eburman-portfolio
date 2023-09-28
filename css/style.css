@@ -185,11 +185,6 @@ input#input-box:focus::placeholder {
   padding-bottom: 15px;
 }
 
-.nav-link:hover{
-  color: var(--navy);
-  background-color: white;
-}
-
 nav > div {
   padding: 15px 10px;
   font-size: large;
