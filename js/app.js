@@ -8,6 +8,7 @@ let deleting = false;
 /*---- Cached Element References ----*/
 const rolesEl = document.getElementById('roles');
 const scrollEl = document.querySelectorAll('.scroll');
+const navbar = document.getElementById('nav-computer');
 
 /*------------ Event Listeners ------------*/
 scrollEl.forEach((el) => {
@@ -101,6 +102,22 @@ selectedProjects.forEach((link) => {
     // Add 'selected' class to the clicked selected project link
     link.classList.add('selected');
   });
+});
+
+let prevScrollPos = window.scrollY;
+
+window.addEventListener('scroll', () => {
+  const currentScrollPos = window.scrollY;
+
+  if (currentScrollPos > prevScrollPos) {
+    // Scrolling down, make the navbar opaque
+    navbar.style.backgroundColor = 'rgba(10, 157, 168, 0.9)';
+  } else {
+    // Scrolling up, make the navbar less opaque
+    navbar.style.backgroundColor = 'rgba(10, 157, 168, 0.7)'; // Adjust the opacity as needed
+  }
+
+  prevScrollPos = currentScrollPos;
 });
 
 /*------------ Initialization ------------*/
