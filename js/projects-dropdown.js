@@ -1,22 +1,34 @@
 document.addEventListener("DOMContentLoaded", function() {
-  // Close the dropdown if the user clicks outside of it
-  window.addEventListener("click", function(event) {
-    const dropdown = document.querySelector(".projects-dropdown");
-    if (dropdown && !dropdown.contains(event.target)) {
-      const dropdownContent = dropdown.querySelector(".projects-dropdown-content");
+  const projectsDropdown = document.querySelector(".projects-dropdown");
+  const dropdownContent = document.querySelector(".projects-dropdown-content");
+  const arrow = document.querySelector(".arrow");
+
+  // Toggle the dropdown on click
+  projectsDropdown.addEventListener("click", function(event) {
+    event.stopPropagation();
+
+    if (dropdownContent.style.display === "none" || dropdownContent.style.display === "") {
+      dropdownContent.style.display = "block";
+      arrow.classList.remove("fa-chevron-down");
+      arrow.classList.add("fa-chevron-up");
+    } else {
       dropdownContent.style.display = "none";
+      arrow.classList.remove("fa-chevron-up");
+      arrow.classList.add("fa-chevron-down");
     }
   });
 
-  // Add a class to control the dropdown's opacity
-  const projectsDropdown = document.querySelector(".projects-dropdown");
-  const dropdownContent = document.querySelector(".projects-dropdown-content");
-
-  projectsDropdown.addEventListener("mouseover", function() {
-    dropdownContent.classList.add("show-dropdown");
+  // Close the dropdown if the user clicks outside of it
+  window.addEventListener("click", function(event) {
+    if (dropdownContent.style.display === "block" && !projectsDropdown.contains(event.target)) {
+      dropdownContent.style.display = "none";
+      arrow.classList.remove("fa-chevron-up");
+      arrow.classList.add("fa-chevron-down");
+    }
   });
 
-  projectsDropdown.addEventListener("mouseout", function() {
-    dropdownContent.classList.remove("show-dropdown");
+  // Prevent clicks inside the dropdown from closing it
+  dropdownContent.addEventListener("click", function(event) {
+    event.stopPropagation();
   });
 });
