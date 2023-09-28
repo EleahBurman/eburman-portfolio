@@ -24,6 +24,18 @@ scrollEl.forEach((el) => {
     el.style.color = 'var(--teal)';
   });
 
+
+  el.addEventListener('mouseenter', (e) => {
+    el.style.backgroundColor = 'white';
+    el.style.color = 'var(--navy)';
+  });
+
+  el.addEventListener('mouseleave', (e) => {
+    el.style.backgroundColor = 'transparent';
+    el.style.color = 'white';
+  });
+  
+
   el.addEventListener('blur', (e) => {
     el.style.backgroundColor = 'transparent';
     el.style.color = 'rgb(255, 255, 255)';
