@@ -703,6 +703,10 @@ main {
   display: none;
 }
 
+.nav-mobile a{
+  display:none;
+}
+
 @media screen and (max-width: 768px) {
   .projects-container{
     margin-left: 10%;
@@ -786,7 +790,7 @@ main {
     opacity: 0;
   }
 
-  .mobile-nav {
+  .nav-mobile {
     position: absolute;
     top: 0;
     right: -200%;
@@ -800,11 +804,11 @@ main {
     transition: right 0.4s;
   }
 
-  .mobile-nav.is-active{
+  .nav-mobile.is-active{
     right: 0;
   }
 
-  .mobile-nav a{
+  .nav-mobile a{
     display: block;
     margin: 0 auto 8px;
     text-align: center;
@@ -816,7 +820,7 @@ main {
     background-color: var(--mediumteal);
   }
 
-  .mobile-nav a:focus{
+  .nav-mobile a:focus{
     background-color: var(--hoverteal);
   }
 
