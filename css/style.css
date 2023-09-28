@@ -713,6 +713,9 @@ main {
     margin-left: 10%;
   }
 
+  #top{
+    display: none;
+  }
 
   #nav-computer{
     display: none;
