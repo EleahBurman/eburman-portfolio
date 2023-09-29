@@ -35,11 +35,6 @@ scrollEl.forEach((el) => {
     el.style.color = 'white';
   });
   
-
-  el.addEventListener('blur', (e) => {
-    el.style.backgroundColor = 'transparent';
-    el.style.color = 'rgb(255, 255, 255)';
-  });
 });
 
 // Add this event listener to remove focus when not at the hamburger element
