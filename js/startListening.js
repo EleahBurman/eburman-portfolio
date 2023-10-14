@@ -1,7 +1,6 @@
-// Function to start listening when the microphone button is clicked
 function startListening() {
   const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
-  recognition.lang = 'en-US'; // Set the language, adjust as needed
+  recognition.lang = navigator.language || 'en-US'; // Use the user's preferred language or default to 'en-US' if not available
 
   recognition.onresult = function(event) {
     const transcript = event.results[0][0].transcript;
