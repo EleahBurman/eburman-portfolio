@@ -170,7 +170,7 @@ input#input-box:focus::placeholder {
 }
 
 .clear-button:hover,
-.search-button:hover {
+.search-button:hover, #microphone-button:hover {
   background-color: var(--lightteal);
 }
 
