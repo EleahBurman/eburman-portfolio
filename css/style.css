@@ -145,6 +145,7 @@ input#input-box:focus::placeholder {
 
 .search-box.open {
   display: block;
+  padding-right: 0;
 }
 
 .clear-button,
