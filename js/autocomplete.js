@@ -157,3 +157,12 @@ function display(matchingKeywords) {
   resultsBox.innerHTML = "<ul>" + content.join('') + "</ul>";
 }
 
+function openSearchBox() {
+  const searchBox = document.querySelector('.search-box');
+  const searchButtonInit = document.querySelector('.search-button-init');
+  searchBox.classList.add('open');
+  searchButtonInit.classList.add('hide');
+  
+}
+
+

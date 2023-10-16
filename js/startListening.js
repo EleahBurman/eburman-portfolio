@@ -1,11 +1,19 @@
-function startListening() {
+function startListeningAndOpenSearch() {
   const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
-  recognition.lang = navigator.language || 'en-US'; // Use the user's preferred language or default to 'en-US' if not available
+  recognition.lang = navigator.language || 'en-US';
 
-  recognition.onresult = function(event) {
+  recognition.onresult = function (event) {
     const transcript = event.results[0][0].transcript;
     document.getElementById('input-box').value = transcript;
+    openSearchBox(); // Open the search box
   };
 
+  function openSearchBox() {
+    const searchBox = document.querySelector('.search-box');
+    const searchButtonInit = document.querySelector('.search-button-init');
+    searchBox.classList.add('open');
+    searchButtonInit.classList.add('hide');
+  }
+  
   recognition.start();
 }

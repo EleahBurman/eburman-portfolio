@@ -139,9 +139,18 @@ input#input-box:focus::placeholder {
   z-index: 2;
 }
 
+.search-box {
+  display: none;
+}
+
+.search-box.open {
+  display: block;
+}
+
 .clear-button,
 .search-button, 
-#microphone-button {
+#microphone-button, 
+.search-button-init{
   color: white;
   background-color: var(--darkteal);
   border: none;
@@ -161,6 +170,7 @@ input#input-box:focus::placeholder {
   width: 20px;
 }
 
+
 .clear-button{
   display: none;
   border: none;
@@ -170,13 +180,18 @@ input#input-box:focus::placeholder {
 }
 
 .clear-button:hover,
-.search-button:hover, #microphone-button:hover {
+.search-button:hover, #microphone-button:hover,
+.search-button-init:hover {
   background-color: var(--lightteal);
 }
 
 #microphone-button{
   border-radius: 8px;
   margin-left: 5px;
+}
+
+.search-button-init{
+  border-radius: 8px;
 }
 
 .nav-link{
@@ -328,6 +343,16 @@ main {
 
 .hidden{
   display: none;
+}
+
+.hide{
+  display:none;
+}
+
+.searchandmicrophone{
+  padding-top: 13px;
+  padding-left:0px;
+
 }
 
 .filter-buttons {
