@@ -77,10 +77,36 @@ function search() {
   if (keyword.length) {
     searchImage(keyword);
     searchText(keyword);
+
+  // Capitalize the first letter and make the rest lowercase
+  const formattedKeyword = keyword.charAt(0).toUpperCase() + keyword.slice(1).toLowerCase();
+  const numResults = getNumResults(keyword);
+
+  resultsBox.innerHTML = `Found ${numResults} results for "${formattedKeyword}"`;
   } else {
-    resetHighlights();
-    clearHighlightedWords();
+  resetHighlights();
+  clearHighlightedWords();
+  resultsBox.innerHTML = ""; // Clear the results box when no keyword is entered
   }
+}
+
+// Function to count the number of results
+function getNumResults(keyword) {
+  const elementsToSearch = document.querySelectorAll(".about-text, .new-project-description");
+  let count = 0;
+
+  elementsToSearch.forEach((element) => {
+    const content = element.textContent;
+    const words = content.split(' ');
+
+    words.forEach((word) => {
+      if (word.toUpperCase().includes(keyword)) {
+        count++;
+      }
+    });
+  });
+
+  return count;
 }
 
 // Perform the search and apply highlighting for images
