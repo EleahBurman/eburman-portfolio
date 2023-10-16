@@ -90,10 +90,16 @@ input#input-box:focus::placeholder {
   color: transparent;
 }
 
+.result-box{
+  font-size: 16px;
+  margin-top: 20px;
+}
+
 .result-box ul{
   border-radius: 20px;
   padding: 0px 10px;
   font-size: 16px;
+  margin-top: 0px;
 }
 
 .result-box ul li{
