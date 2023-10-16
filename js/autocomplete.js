@@ -93,6 +93,8 @@ function search() {
 // Function to count the number of results
 function getNumResults(keyword) {
   const elementsToSearch = document.querySelectorAll(".about-text, .new-project-description");
+  const imageElementsToSearch = document.querySelectorAll(".scroll, .badge, .languages, .screenshot, .column-icon");
+
   let count = 0;
 
   elementsToSearch.forEach((element) => {
@@ -102,12 +104,25 @@ function getNumResults(keyword) {
     words.forEach((word) => {
       if (word.toUpperCase().includes(keyword)) {
         count++;
+        console.log("The count with words is: " + count)
       }
     });
+
   });
 
+  imageElementsToSearch.forEach((element) => {
+    const altContent = element.getAttribute("alt") ? element.getAttribute("alt").toUpperCase() : "";
+
+    if (altContent.includes(keyword)) {
+      count++;
+      console.log("The count with images is: " + count)
+    }
+  });
+
+  console.log("Final Count: ", count);
   return count;
 }
+
 
 // Perform the search and apply highlighting for images
 function searchImage(keyword) {
