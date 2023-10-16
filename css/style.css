@@ -509,13 +509,13 @@ main {
   margin-bottom:60px;
   opacity: 0; /* Initially hidden */
   transform: translateY(100px); /* Initially moved down */
-  transition: opacity 1s, transform 1s;
+  transition: opacity 1s, transform 1.3s;
 }
 
 .newproject.animate {
   opacity: 1; /* Fades in */
   transform: translateY(0); /* Moves to its position */
-  animation: fadeInAndRaise 1s ease-in-out;
+  animation: fadeInAndRaise 1.3s ease-in-out;
 }
 
 @keyframes fadeInAndRaise {
@@ -523,6 +523,10 @@ main {
       opacity: 0;
       transform: translateY(100px);
   }
+  50% {
+    opacity: 0.5;
+    transform: translateY(50px);
+}
   100% {
       opacity: 1;
       transform: translateY(0);
@@ -667,10 +671,9 @@ main {
 }
 
 .arrow {
-  transition: transform 0.3s; /* Add a smooth transition */
+  transition: transform 0.3s;
 }
 
-/* Define the down and up arrow rotations */
 .arrow.down {
   transform: rotate(0deg);
 }
