@@ -104,7 +104,6 @@ function getNumResults(keyword) {
     words.forEach((word) => {
       if (word.toUpperCase().includes(keyword)) {
         count++;
-        console.log("The count with words is: " + count)
       }
     });
 
@@ -115,11 +114,9 @@ function getNumResults(keyword) {
 
     if (altContent.includes(keyword)) {
       count++;
-      console.log("The count with images is: " + count)
     }
   });
 
-  console.log("Final Count: ", count);
   return count;
 }
 
