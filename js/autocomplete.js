@@ -72,15 +72,6 @@ function selectInput(list, keyword) {
   search();
 }
 
-// Perform the search, scroll, and apply highlighting
-function scrollToElement(element) {
-  const parentSection = element.closest(".section");
-  if (parentSection) {
-    parentSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    element.classList.add("brighten");
-  }
-}
-
 function search() {
   const keyword = inputBox.value.trim().toUpperCase();
   if (keyword.length) {
@@ -94,18 +85,27 @@ function search() {
 
 // Perform the search and apply highlighting for images
 function searchImage(keyword) {
-  const elementsToSearch = document.querySelectorAll(".scroll, .badge, .languages, .screenshot");
+  const elementsToSearch = document.querySelectorAll(".scroll, .badge, .languages, .screenshot, .column-icon");
+
+  let firstMatchedElement = null;
 
   elementsToSearch.forEach((element) => {
     const altContent = element.getAttribute("alt") ? element.getAttribute("alt").toUpperCase() : "";
 
+    if (altContent.includes(keyword) && !firstMatchedElement) {
+      firstMatchedElement = element;
+    }
+
     if (altContent.includes(keyword)) {
-      element.classList.add("brighten")
-      scrollToElement(element);
+      element.classList.add("brighten");
     } else {
       element.classList.remove("brighten");
     }
   });
+
+  if (firstMatchedElement) {
+    firstMatchedElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
 }
 
 // Perform the search and apply highlighting for text
@@ -162,7 +162,6 @@ function openSearchBox() {
   const searchButtonInit = document.querySelector('.search-button-init');
   searchBox.classList.add('open');
   searchButtonInit.classList.add('hide');
-  
 }
 
 
