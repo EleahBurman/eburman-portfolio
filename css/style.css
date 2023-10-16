@@ -507,6 +507,26 @@ main {
   position: relative;
   height:255px;
   margin-bottom:60px;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(100px); /* Initially moved down */
+  transition: opacity 1s, transform 1s;
+}
+
+.newproject.animate {
+  opacity: 1; /* Fades in */
+  transform: translateY(0); /* Moves to its position */
+  animation: fadeInAndRaise 1s ease-in-out;
+}
+
+@keyframes fadeInAndRaise {
+  0% {
+      opacity: 0;
+      transform: translateY(100px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
 
 .new-screenshot{
