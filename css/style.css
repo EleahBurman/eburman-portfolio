@@ -830,8 +830,12 @@ main {
     padding-top: 50px;
     z-index: 1000;
     position: sticky;
+    justify-content: space-around;
   }
-
+  
+  .hamburger-container{
+    margin-right: 25%;
+  }
   .hamburger{
     position: relative;
     display: block;
@@ -842,6 +846,7 @@ main {
     outline: none;
     border: none;
     z-index: 100;
+    padding: 0;
   }
 
   .hamburger .bar, .hamburger:after, .hamburger:before{
@@ -904,8 +909,8 @@ main {
     display: flex;
     justify-content: left;
     align-items: left;
-    margin-right: 60%;
     margin-bottom: 0;
+    margin-left: 10%;
   }
 
   #navbar.open {
