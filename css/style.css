@@ -835,6 +835,7 @@ main {
   
   .hamburger-container{
     margin-right: 25%;
+    margin-top: 5px;
   }
   .hamburger{
     position: relative;
