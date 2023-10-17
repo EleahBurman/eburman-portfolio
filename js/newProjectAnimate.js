@@ -1,5 +1,6 @@
 const newprojects = document.querySelectorAll(".newproject");
 
+
 const options = {
     root: null,
     rootMargin: "0px",
