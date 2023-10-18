@@ -146,13 +146,20 @@ input#input-box:focus::placeholder {
 }
 
 .search-box {
-  display: none;
+  width: 0;
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out;
+  transform-origin: right;
+  transform: scaleX(0);
 }
 
+
 .search-box.open {
-  display: block;
-  padding-right: 0;
+  width: 180px;
+  transition: transform 0.5s ease-in-out;
+  transform: scaleX(1);
 }
+
 
 .clear-button,
 .search-button, 

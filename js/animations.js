@@ -1,10 +1,10 @@
-// For 'newprojects' animation
+/*---- New Project Animation ----*/
 const newprojects = document.querySelectorAll(".newproject");
 
 const newProjectsOptions = {
     root: null,
     rootMargin: "0px",
-    threshold: 0.5, // Trigger when at least 50% of the element is visible
+    threshold: 0.5,
 };
 
 const newProjectsObserver = new IntersectionObserver(handleIntersectForNewProjects, newProjectsOptions);
@@ -17,18 +17,18 @@ function handleIntersectForNewProjects(entries, observer) {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
             entry.target.classList.add("animate");
-            newProjectsObserver.unobserve(entry.target); // Stop observing once animation is triggered
+            newProjectsObserver.unobserve(entry.target);
         }
     });
 }
 
-// For 'titles' animation
+/*---- Titles Animation ----*/
 const titles = document.querySelectorAll(".title");
 
 const titlesOptions = {
     root: null,
     rootMargin: "0px",
-    threshold: 0.5, // Trigger when at least 50% of the element is visible
+    threshold: 0.5,
 };
 
 const titlesObserver = new IntersectionObserver(handleIntersectForTitles, titlesOptions);
@@ -41,17 +41,18 @@ function handleIntersectForTitles(entries, observer) {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
             entry.target.classList.add("fade");
-            titlesObserver.unobserve(entry.target); // Stop observing once animation is triggered
+            titlesObserver.unobserve(entry.target);
         }
     });
 }
 
+/*---- Resume Animation ----*/
 const resumeContent = document.querySelector(".resume-content");
 
 const resumeContentOptions = {
     root: null,
     rootMargin: "0px",
-    threshold: 0.5, // Trigger when at least 50% of the element is visible
+    threshold: 0.5,
 };
 
 const resumeContentObserver = new IntersectionObserver(handleIntersectForResumeContent, resumeContentOptions);
@@ -61,18 +62,19 @@ resumeContentObserver.observe(resumeContent);
 function handleIntersectForResumeContent(entries, observer) {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
-            entry.target.classList.add("animation"); // Replace "your-animation-class" with the appropriate class name
-            resumeContentObserver.unobserve(entry.target); // Stop observing once animation is triggered
+            entry.target.classList.add("animation");
+            resumeContentObserver.unobserve(entry.target);
         }
     });
 }
 
+/*---- About Info Animation ----*/
 const aboutInfo = document.querySelector(".about-info");
 
 const aboutInfoOptions = {
     root: null,
     rootMargin: "0px",
-    threshold: 0.5, // Trigger when at least 50% of the element is visible
+    threshold: 0.5,
 };
 
 const aboutInfoObserver = new IntersectionObserver(handleIntersectForAboutInfo, aboutInfoOptions);
