@@ -720,6 +720,15 @@ main {
   justify-content: flex-start;
   align-items: center;
   padding: 20px;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s, transform 1.3s;
+}
+
+.about-info.animating{
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeInAndRaise 1.3s ease-in-out;
 }
 
 .about-text {

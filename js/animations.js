@@ -66,3 +66,24 @@ function handleIntersectForResumeContent(entries, observer) {
         }
     });
 }
+
+const aboutInfo = document.querySelector(".about-info");
+
+const aboutInfoOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5, // Trigger when at least 50% of the element is visible
+};
+
+const aboutInfoObserver = new IntersectionObserver(handleIntersectForAboutInfo, aboutInfoOptions);
+
+aboutInfoObserver.observe(aboutInfo);
+
+function handleIntersectForAboutInfo(entries, observer) {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("animating"); // Replace "animating" with the appropriate class name
+            aboutInfoObserver.unobserve(entry.target); // Stop observing once animation is triggered
+        }
+    });
+}
