@@ -217,8 +217,17 @@ input#input-box:focus::placeholder {
 }
 
 .eb-logo{
-  border-bottom: 20px;
-  padding-bottom: 15px;
+
+  animation: spin 4s linear infinite; /* Adjust the duration and timing function as needed */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 nav > div {
