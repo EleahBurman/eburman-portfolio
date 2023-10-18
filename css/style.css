@@ -579,7 +579,7 @@ main {
 
 .title.fade{
   opacity: 1;
-  animation: fadeIn 1.3s ease-in-out;
+  animation: fadeIn 2s ease-in-out;
 }
 
 @keyframes fadeIn{
@@ -587,9 +587,18 @@ main {
     opacity: 0;
   }
 
+  25% {
+    opacity: 0.25;
+  }
+
   50% {
   opacity: 0.5;
   }
+
+  75% {
+    opacity: 0.75;
+  }
+
   100% {
     opacity: 1;
   }
