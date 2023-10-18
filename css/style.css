@@ -411,7 +411,7 @@ main {
 .resume-content.animation{
   opacity: 1; /* Fades in */
   transform: translateY(0); /* Moves to its position */
-  animation: fadeInAndRaise 1.3s ease-in-out;
+  animation: fadeInAndRaise 1.3s ease-in-out smooth;
 }
 
 .project-badge:hover{
