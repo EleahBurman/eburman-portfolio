@@ -314,15 +314,6 @@ main {
   background-color: white;
 }
 
-.section {
-  padding: 40px 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
-}
-
 .title {
   border-bottom: 2px solid var(--navy);
   font-size: 48px;
@@ -406,6 +397,21 @@ main {
   max-width: 750px;
   width: 100%;
   padding: 10px;
+}
+
+.resume-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(100px); /* Initially moved down */
+  transition: opacity 1s, transform 1.3s;
+}
+
+.resume-content.animation{
+  opacity: 1; /* Fades in */
+  transform: translateY(0); /* Moves to its position */
+  animation: fadeInAndRaise 1.3s ease-in-out;
 }
 
 .project-badge:hover{
@@ -555,13 +561,37 @@ main {
       opacity: 0;
       transform: translateY(100px);
   }
-  50% {
-    opacity: 0.5;
-    transform: translateY(50px);
-}
+
   100% {
       opacity: 1;
       transform: translateY(0);
+  }
+}
+
+.section {
+  padding: 40px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+.title.fade{
+  opacity: 1;
+  animation: fadeIn 1.3s ease-in-out;
+}
+
+@keyframes fadeIn{
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+  opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -773,6 +803,7 @@ main {
 .title {
   border-bottom: 2px solid var(--navy);
   text-align: center;
+  opacity: 0;
 }
 
 #navbar {

@@ -1,23 +1,68 @@
+// For 'newprojects' animation
 const newprojects = document.querySelectorAll(".newproject");
 
-
-const options = {
+const newProjectsOptions = {
     root: null,
     rootMargin: "0px",
     threshold: 0.5, // Trigger when at least 50% of the element is visible
 };
 
-const observer = new IntersectionObserver(handleIntersect, options);
+const newProjectsObserver = new IntersectionObserver(handleIntersectForNewProjects, newProjectsOptions);
 
 newprojects.forEach((newproject) => {
-    observer.observe(newproject);
+    newProjectsObserver.observe(newproject);
 });
 
-function handleIntersect(entries, observer) {
+function handleIntersectForNewProjects(entries, observer) {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
             entry.target.classList.add("animate");
-            observer.unobserve(entry.target); // Stop observing once animation is triggered
+            newProjectsObserver.unobserve(entry.target); // Stop observing once animation is triggered
+        }
+    });
+}
+
+// For 'titles' animation
+const titles = document.querySelectorAll(".title");
+
+const titlesOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5, // Trigger when at least 50% of the element is visible
+};
+
+const titlesObserver = new IntersectionObserver(handleIntersectForTitles, titlesOptions);
+
+titles.forEach((title) => {
+    titlesObserver.observe(title);
+});
+
+function handleIntersectForTitles(entries, observer) {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("fade");
+            titlesObserver.unobserve(entry.target); // Stop observing once animation is triggered
+        }
+    });
+}
+
+const resumeContent = document.querySelector(".resume-content");
+
+const resumeContentOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5, // Trigger when at least 50% of the element is visible
+};
+
+const resumeContentObserver = new IntersectionObserver(handleIntersectForResumeContent, resumeContentOptions);
+
+resumeContentObserver.observe(resumeContent);
+
+function handleIntersectForResumeContent(entries, observer) {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("animation"); // Replace "your-animation-class" with the appropriate class name
+            resumeContentObserver.unobserve(entry.target); // Stop observing once animation is triggered
         }
     });
 }
