@@ -1214,6 +1214,9 @@ main {
   .phone-eb-logo{
     margin-right: 58%;
   }
+  .last-project{
+    margin-bottom: 20px;
+  }
 }
 
 @media screen and (max-width: 375px){
