@@ -22,6 +22,30 @@ function handleIntersectForNewProjects(entries, observer) {
     });
 }
 
+/*---- Project Description Animation ----*/
+const projectDescriptions = document.querySelectorAll(".project-description");
+
+const projectDescriptionsOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5,
+};
+
+const newDescriptionsObserver = new IntersectionObserver(handleIntersectForNewDescriptions, projectDescriptionsOptions);
+
+projectDescriptions.forEach((projectdescription) => {
+    newProjectsObserver.observe(projectdescription);
+});
+
+function handleIntersectForNewDescriptions(entries, observer) {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("animate-project-description");
+            newDescriptionsObserver.unobserve(entry.target);
+        }
+    });
+}
+
 /*---- Titles Animation ----*/
 const titles = document.querySelectorAll(".title");
 
