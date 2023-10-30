@@ -1109,16 +1109,6 @@ main {
     margin-right: 10px;
   }
 
-  .new-overlay{
-    height: 255px;
-    width: 80%;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-    margin-right:50px;
-    left:33px;
-    top: 50px;
-  }
-
   .title {
     border-bottom: 2px solid var(--navy);
     text-align: center;
