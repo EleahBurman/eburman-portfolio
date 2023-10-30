@@ -768,7 +768,9 @@ main {
   left: 0;
   position: fixed;
   margin: 16px;
+  z-index: 2000;
 }
+
 
 .footer-icon{
   width: 40px;
@@ -905,7 +907,7 @@ main {
     padding-top: 50px;
     z-index: 1000;
     position: sticky;
-    justify-content: space-around;
+    justify-content: flex-end; 
   }
   
   .hamburger-container{
@@ -1183,7 +1185,7 @@ main {
     margin: 0px 5px 0px 38px;
   }
   .phone-eb-logo{
-    margin-right: 55%;
+    margin-right: 50%;
   }
   .last-description{
     margin-top: 0px;
@@ -1193,6 +1195,9 @@ main {
   }
   .first-screenshot, .first-column{
     margin-top: 10px;
+  }
+  .container{
+    margin-left:14px;
   }
 }
 
@@ -1230,17 +1235,27 @@ main {
     margin: 0px 5px 0px 38px;
   }
   .phone-eb-logo{
-    margin-right: 58%;
+    margin-right: 55%;
   }
   .last-project{
     margin-bottom: 20px;
   }
+  .container{
+    margin-left: 7%;
+  }
 }
 
 @media screen and (max-width: 375px){
+  .container{
+    margin-left:25px;
+  }
   .new-project-card-title{
     margin-right: 0px;
     font-size: 18px;
+  }
+
+  .hamburger-container{
+    margin-left:10px;
   }
 }
 
@@ -1262,6 +1277,6 @@ main {
     font-size: 18px;
   }
   .phone-eb-logo {
-    margin-right: 62%;
+    margin-right: 55%;
 }
 }
