@@ -17,6 +17,7 @@
   <script defer src="./js/startListening.js"></script>
   <script defer src="./js/animations.js"></script>
   <script defer src="./js/readMore.js"></script>
+  <script defer src="./js/enlarge.js"></script>
 
   <link
   id="favicon"
@@ -27,7 +28,7 @@
   >
   <title>Eleah Burman Portfolio</title>
 </head>
-<body>
+<body id="body">
   <nav id="nav-computer">
     <img src="./assets/images/eb-square-logo.png" height="64" class="eb-logo" alt="eb logo">
     <div>
@@ -79,10 +80,12 @@
       <div class="result-box">
       </div>
     </div>
+
     <div class="searchandmicrophone">
       <button class="search-button-init" onclick="openSearchBox()"><i class="fa-solid fa-search"></i></button>
       <button id="microphone-button" onclick="startListeningAndOpenSearch()"><i class="fa-solid fa-microphone"></i></button>
     </div>
+
   </nav>
 
   <div class="container">
@@ -107,21 +110,28 @@
         <img src="../assets/images/eleah-burman-banner.png" alt="Eleah Banner" class="banner">
       </div>
       <div class="header">
-        <h1 id="name">
+        <h1 id="eleah-name">
           Eleah Burman
         </h1>
         <p id="roles"></p>
         <div class="header-links">
-          <a class="page-link scroll" href="#projects">Projects</a>
+          <a class="page-link scroll" href="#projects" id="projects-button">Projects</a>
         </div>
       </div>
     </section>
 
 
     <section id="projects" class="section">
-      <p class="title"><span>Projects</span></p>
+      <p class="title" id="title"><span>Projects</span></p>
+
       <div class="new-projects-container">
-        
+        <div id="overlay" class="overlay">
+          <div id="lightbox" class="lightbox">
+            <img id="lightbox-image" class="lightbox-image" src="" alt="Lightbox Image" onclick="closeLightbox()">
+            <h2 id="caption"></h2>
+          </div>
+        </div>
+
         <!-- Project 1 -->
         <div class="project-card">
           <div class="newproject">
@@ -141,7 +151,9 @@
               </div>
       
               <div class="new-column">
-                <img class="new-screenshot first-screenshot" src="assets/images/drag-queen-collector-ss.png" alt="Drag Queen Collector">
+                <div class="lightbox-container">
+                  <img class="new-screenshot first-screenshot" id="first-screenshot" src="assets/images/drag-queen-collector-ss.png" alt="Drag Queen Collector" onclick="openLightbox(this)">
+                </div>
               </div>
 
             </div>
@@ -181,7 +193,7 @@
                 <a href="https://nodejs.org/en/docs"><img src="./assets/images/icons/nodejs-big-icon.png" alt="node js icon" class="column-icon nodejs-icon"></a>
               </div>
               <div class="new-column">
-                <img class="new-screenshot" src="./assets/images/caffeinate.png" alt="Caffeinate Me">
+                <img class="new-screenshot" src="./assets/images/caffeinate.png" alt="Caffeinate Me" onclick="openLightbox(this)">
               </div>
             </div>
           </div>
@@ -219,7 +231,7 @@
                         <a href="https://www.mongodb.com/docs/"><img src="./assets/images/icons/mongodb-big-icon.png" alt="mongodb icon" class="column-icon mongo-db-icon"></a>
                       </div>
                       <div class="new-column">
-                        <img class="new-screenshot" src="./assets/images/bite-buddy-chicken.png" alt="Bite Buddy">
+                        <img class="new-screenshot" src="./assets/images/bite-buddy-chicken.png" alt="Bite Buddy" onclick="openLightbox(this)">
                       </div>
                     </div>
                   </div>
@@ -256,7 +268,7 @@
                 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img src="./assets/images/icons/css-big-icon.png" alt="css icon" class="column-icon css-icon"></a>
               </div>
               <div class="new-column">
-                <img class="new-screenshot" id="cat-vs-catlady" src="./assets/images/cat-catlady-screenshot.png" alt="Cat Vs Cat Lady">
+                <img class="new-screenshot" id="cat-vs-catlady" src="./assets/images/cat-catlady-screenshot.png" alt="Cat Vs Cat Lady" onclick="openLightbox(this)">
 
 
               </div>
@@ -297,7 +309,7 @@
                 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img src="./assets/images/icons/css-big-icon.png" alt="css icon" class="column-icon"></a>
               </div>
               <div class="new-column">
-                <img class="new-screenshot" src="./assets/images/rainbow-words-screenshot.png" alt="Rainbow Words">
+                <img class="new-screenshot" src="./assets/images/rainbow-words-screenshot.png" alt="Rainbow Words" onclick="openLightbox(this)">
 
               </div>
             </div>
@@ -335,7 +347,7 @@
                 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img src="./assets/images/icons/css-big-icon.png" alt="css icon" class="column-icon css-icon"></a>
               </div>
               <div class="new-column">
-                <img class="new-screenshot" src="./assets/images/eleah-portfolio-website-screenshot.png" alt="Eleah Burman Portfolio">
+                <img class="new-screenshot" src="./assets/images/eleah-portfolio-website-screenshot.png" alt="Eleah Burman Portfolio" onclick="openLightbox(this)">
 
               </div>
             </div>
