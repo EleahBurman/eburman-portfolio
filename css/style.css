@@ -494,6 +494,7 @@ main {
 .new-row{
   display: flex;
   flex-direction: row;
+  margin-left:8%;
 }
 
 .new-column{
@@ -533,7 +534,7 @@ main {
 
 .github-project-img{
   height: 1em;
-  margin-left: 55px;
+  margin-left: 46px;
   margin-right: 5px;
 }
 
@@ -675,6 +676,7 @@ main {
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
   padding: 5px;
   transition: opacity 1s, transform 1.3s;
+  margin-left: 4%;
 }
 
 .project-card{
@@ -686,6 +688,7 @@ main {
 
 .new-project-card-title{
   font-size:36px;
+  margin-left: 6px;
 }
 
 .new-project-card-title:hover{
@@ -878,6 +881,10 @@ main {
 
 @media screen and (max-width: 768px) {
 
+  .new-row{
+    margin-left: 0;
+  }
+
   .overlay{
     max-width: 100%;
     max-height: 100%;
@@ -916,6 +923,7 @@ main {
     border-bottom: 0;
     animation: fadeInAndRaise 1.3s ease-in-out;
     height: 200px;
+    margin-left: 0;
   }
 
   .project-description{
@@ -923,6 +931,7 @@ main {
     margin-top: 0;
     padding-top:0;
     border-top: 0;
+    margin-left: 0;
   }
 
   .last-description{
