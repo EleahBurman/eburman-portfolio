@@ -24,6 +24,7 @@ function openLightbox(image) {
     // Gradually zoom in to full size
     lightboxImage.style.transform = 'scale(1)';
   }, 0); // You can adjust the delay if needed
+  
 }
 
 

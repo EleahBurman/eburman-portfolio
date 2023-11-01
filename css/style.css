@@ -567,13 +567,12 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 90%;
-  max-height: 100%;
   z-index: 10000;
   background-color: #fff;
   outline: solid rgb(226, 225, 225) 5px;
   overflow: hidden;
   z-index: 9999;
+  height: 310px;
 }
 
 .close-lightbox {
@@ -591,8 +590,8 @@ main {
 
 .lightbox-image {
   display: block;
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: fit-content;
   cursor: pointer;
   transition: transform 0.6s;
 }
@@ -884,8 +883,8 @@ main {
     max-height: 100%;
   }
   .lightbox{
-    width: 500px; /* Set the maximum width to 200% of the screen width */
-    height: 255px;
+    width: 300px; /* Set the maximum width to 200% of the screen width */
+    height: 150px;
   }
 
   .lightbox-image {
