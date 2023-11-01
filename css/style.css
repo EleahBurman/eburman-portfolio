@@ -504,6 +504,10 @@ main {
   border-bottom-left-radius: 8px;
 }
 
+.first-column{
+  height: 255px;
+}
+
 .column-bg{
   background-color: #0d3051;
   width:54px;
@@ -1273,7 +1277,7 @@ main {
   .phone-eb-logo{
     margin-right: 50%;
   }
-  
+
   .first-title{
     margin-bottom: 20px;
   }
