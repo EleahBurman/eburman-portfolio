@@ -2,6 +2,8 @@
 
  This is a personal portfolio website for Eleah Burman, a skilled full-stack software engineer with a passion for web development and design. The website serves as a showcase of her work, skills, and experience.
 
+ ![Portfolio Screenshot](/assets/images/portfolio-ss.png)
+
 ## Features
 
 - **Navigation:** The site provides easy navigation with a top bar and mobile menu for quick access to different sections.
