@@ -580,13 +580,16 @@ main {
   height: 310px;
 }
 
-.close-container{
+.lightbox-container {
+  position: relative;
+  display: inline-block;
   width: 100%;
 }
 
 .close-lightbox {
+  position: relative;
   margin-left: 74%;
-  margin-top: 8%;
+  margin-top: 10%;
   font-size: 30px;
   cursor: pointer;
 }
