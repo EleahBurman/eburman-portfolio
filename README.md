@@ -1,8 +1,10 @@
 # Eleah Burman Portfolio
 
+[Portfolio Link](https://eleahburmanportfolio.fly.dev/)
+
  This is a personal portfolio website for Eleah Burman, a skilled full-stack software engineer with a passion for web development and design. The website serves as a showcase of her work, skills, and experience.
 
- ![Portfolio Screenshot](/assets/images/portfolio-ss.png)
+ ![Portfolio Screenshot](/assets/images/portfolio-ss.png?raw=true "Eleah Burman Portfolio Screenshot")
 
 ## Features
 
