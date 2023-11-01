@@ -580,17 +580,15 @@ main {
   height: 310px;
 }
 
+.close-container{
+  width: 100%;
+}
+
 .close-lightbox {
-  display: none;
-  position: relative;
-  left: 95%;
-  margin-top: 10%;
-  flex-direction: row;
+  margin-left: 74%;
+  margin-top: 8%;
+  font-size: 30px;
   cursor: pointer;
-  font-size: 32px; /* Adjust the font size as needed */
-  color: white;
-  z-index: 99999;
-  line-height: 1; /* Adjust line-height for spacing within the button */
 }
 
 .lightbox-image {
@@ -904,6 +902,11 @@ main {
     height: 100%;
   }
 
+  .close-lightbox {
+    margin-left: 80%;
+    margin-top: 80%;
+    cursor: pointer;
+  }
   .new-projects-container{
     margin-left: 10%;
   }
