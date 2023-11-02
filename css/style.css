@@ -552,6 +552,10 @@ main {
   cursor: pointer;
 }
 
+.new-screenshot:hover{
+  filter: brightness(80%);
+}
+
 .overlay {
   display: none;
   position: fixed;
