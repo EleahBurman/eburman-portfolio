@@ -91,14 +91,13 @@ input#input-box:focus::placeholder {
 }
 
 .result-box{
-  font-size: 16px;
-  margin-top: 20px;
+  font-size: 12px;
 }
 
 .result-box ul{
   border-radius: 20px;
   padding: 0px 10px;
-  font-size: 16px;
+  font-size: 14px;
   margin-top: 0px;
 }
 
@@ -106,6 +105,10 @@ input#input-box:focus::placeholder {
   list-style: none;
   cursor: pointer;
   margin-bottom: 10px;
+}
+
+.result-box li{
+  margin-bottom: 0px;
 }
 
 .result-box ul li:hover{

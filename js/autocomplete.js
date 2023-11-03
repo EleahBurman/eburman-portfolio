@@ -83,10 +83,12 @@ function search() {
   const numResults = getNumResults(keyword);
 
   resultsBox.innerHTML = `Found ${numResults} results for "${formattedKeyword}"`;
-  } else {
-  resetHighlights();
-  clearHighlightedWords();
-  resultsBox.innerHTML = ""; // Clear the results box when no keyword is entered
+      // Make the .result-box visible
+      resultsBox.style.display = "inline-block";
+    } else {
+      resetHighlights();
+      clearHighlightedWords();
+      resultsBox.style.display = "none"; // Hide the .result-box when no keyword is entered
   }
 }
 
