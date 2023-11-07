@@ -559,7 +559,8 @@ main {
 }
 
 .new-screenshot:hover{
-  filter: brightness(80%);
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
 }
 
 .overlay {
@@ -598,7 +599,7 @@ main {
   overflow: hidden;
   margin-left: 74%;
   margin-top: 10.5%;
-  font-size: 30px;
+  font-size: 35px;
   cursor: pointer;
 }
 
