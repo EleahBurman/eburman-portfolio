@@ -604,6 +604,10 @@ main {
   cursor: pointer;
 }
 
+.close-lightbox:hover{
+  color: #ffc007;
+}
+
 .lightbox-image {
   display: block;
   width: 100%;
