@@ -50,7 +50,6 @@ inputBox.addEventListener("input", function () {
   if (!input) {
     resetHighlights();
     resetBrighten();
-    clearHighlightedWords();
     clearButton.style.display = "none";
   } else {
     clearButton.style.display = "inline-block";
@@ -62,7 +61,6 @@ clearButton.addEventListener("click", function () {
   resultsBox.innerHTML = "";
   resetHighlights();
   resetBrighten();
-  clearHighlightedWords();
   clearButton.style.display = "none";
   inputBox.focus();
 });
@@ -90,7 +88,6 @@ function search() {
     } else {
       resetHighlights();
       resetBrighten();
-      clearHighlightedWords();
       resultsBox.style.display = "none"; // Hide the .result-box when no keyword is entered
   }
 }
