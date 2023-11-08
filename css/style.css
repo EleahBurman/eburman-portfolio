@@ -899,7 +899,9 @@ main {
 }
 
 @media screen and (max-width: 768px) {
-
+  #eleah-name{
+    font-size: 28px;
+  }
   .new-row{
     margin-left: 0;
   }
