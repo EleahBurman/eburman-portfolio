@@ -899,6 +899,17 @@ main {
 }
 
 @media screen and (max-width: 768px) {
+
+  .project-card{
+    width: 311px;
+    height: 311px;
+    padding-left: 35px;
+  }
+
+  .last-project{
+    margin-bottom: 20px;
+  }
+
   #eleah-name{
     font-size: 28px;
   }
@@ -1367,6 +1378,9 @@ main {
   .hamburger-container{
     margin-left:10px;
   }
+  .last-project{
+    margin-bottom: 0px;
+  }
 }
 
 @media screen and (max-width: 360px) {
@@ -1388,5 +1402,8 @@ main {
   }
   .phone-eb-logo {
     margin-right: 55%;
-}
+  }
+  .last-project{
+  margin-bottom: 0px;
+  }
 }
