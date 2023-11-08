@@ -706,6 +706,10 @@ main {
   margin-left: 6px;
 }
 
+#portfolio-name{
+  color: #ffc007;
+}
+
 .new-project-card-title:hover{
   color: #ffc007;
 }
