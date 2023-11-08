@@ -49,6 +49,7 @@ inputBox.addEventListener("input", function () {
 
   if (!input) {
     resetHighlights();
+    resetBrighten();
     clearHighlightedWords();
     clearButton.style.display = "none";
   } else {
@@ -60,6 +61,7 @@ clearButton.addEventListener("click", function () {
   inputBox.value = "";
   resultsBox.innerHTML = "";
   resetHighlights();
+  resetBrighten();
   clearHighlightedWords();
   clearButton.style.display = "none";
   inputBox.focus();
@@ -87,6 +89,7 @@ function search() {
       resultsBox.style.display = "inline-block";
     } else {
       resetHighlights();
+      resetBrighten();
       clearHighlightedWords();
       resultsBox.style.display = "none"; // Hide the .result-box when no keyword is entered
   }
@@ -146,18 +149,27 @@ function searchImage(keyword) {
   if (firstMatchedElement) {
     firstMatchedElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
+
+}
+// Reset the 'brighten' class from previously highlighted elements
+  function resetBrighten() {
+  const elementsToReset = document.querySelectorAll(".brighten");
+
+  elementsToReset.forEach((element) => {
+    element.classList.remove("brighten");
+  });
 }
 
 // Perform the search and apply highlighting for text
 function searchText(keyword) {
-  const elementsToSearch = document.querySelectorAll(".about-text, .new-project-description");
+  const elementsToSearch = document.querySelectorAll(".partial-description, .full-description, .about-text");
 
   elementsToSearch.forEach((element) => {
     const content = element.textContent;
     const words = content.split(' '); // Split text into words
 
     const highlightedWords = words.map((word) => {
-      if (word.toUpperCase().includes(keyword)) {
+      if (word.toUpperCase().includes(keyword.toUpperCase())) {
         return `<span class="yellowbackground">${word}</span>`;
       } else {
         return word;
@@ -170,21 +182,9 @@ function searchText(keyword) {
 
 // Reset all highlights
 function resetHighlights() {
-  const highlightedElements = document.querySelectorAll(".brighten");
+  const highlightedElements = document.querySelectorAll(".yellowbackground");
   highlightedElements.forEach((element) => {
-    element.classList.remove("brighten");
-  });
-}
-
-// Function to clear highlighted words in text content
-function clearHighlightedWords() {
-  const highlightedTextElements = document.querySelectorAll(".about-text");
-
-  highlightedTextElements.forEach((element) => {
-    const words = element.querySelectorAll('.yellowbackground');
-    words.forEach((word) => {
-      word.classList.remove("yellowbackground");
-    });
+    element.outerHTML = element.textContent; // Remove the span and keep the original text
   });
 }
 
