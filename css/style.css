@@ -561,6 +561,7 @@ main {
 .new-screenshot:hover{
   box-shadow: 0 7px 14px rgba(0, 0, 0, 0.3);
   transform: translateY(-2px);
+  transition: 0.3s;
 }
 
 .overlay {
