@@ -191,11 +191,14 @@ function clearHighlightedWords() {
 // Display matching keywords in results box
 function display(matchingKeywords) {
   const content = matchingKeywords.map((list) => {
-    return `<li onclick="selectInput(this, '${list}')">${list}</li>`;
+    // Add the icon before each keyword
+    const listItem = `<li onclick="selectInput(this, '${list}')"><i class="fa-solid fa-search" style="font-size: 12px;"></i> ${list}</li>`;
+    return listItem;
   });
 
   resultsBox.innerHTML = "<ul>" + content.join('') + "</ul>";
 }
+
 
 function openSearchBox() {
   const searchBox = document.querySelector('.search-box');
