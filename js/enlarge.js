@@ -1,3 +1,10 @@
+// Add this event listener to listen for "Esc" key press
+document.addEventListener('keydown', function (event) {
+  if (event.key === 'Escape' || event.key === 'Esc') {
+    closeLightbox();
+  }
+});
+
 function toggleLightbox(image) {
   const overlay = document.getElementById('overlay');
 
