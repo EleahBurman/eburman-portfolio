@@ -123,30 +123,39 @@ function getNumResults(keyword) {
 
 
 // Perform the search and apply highlighting for images
+// Define a variable to keep track of the currently highlighted element
+let currentHighlightedIndex = -1;
+let matchedElements = [];
+
 function searchImage(keyword) {
   const elementsToSearch = document.querySelectorAll(".scroll, .badge, .languages, .screenshot, .column-icon");
 
-  let firstMatchedElement = null;
+  // Reset the list of matched elements when a new search is performed
+  matchedElements = [];
 
   elementsToSearch.forEach((element) => {
     const altContent = element.getAttribute("alt") ? element.getAttribute("alt").toUpperCase() : "";
 
-    if (altContent.includes(keyword) && !firstMatchedElement) {
-      firstMatchedElement = element;
-    }
-
     if (altContent.includes(keyword)) {
       element.classList.add("brighten");
+      matchedElements.push(element);
     } else {
       element.classList.remove("brighten");
     }
   });
 
-  if (firstMatchedElement) {
-    firstMatchedElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  }
+  if (matchedElements.length > 0) {
+    // Increment the current index to scroll to the next matching element
+    currentHighlightedIndex = (currentHighlightedIndex + 1) % matchedElements.length;
 
+    // Scroll to the next element
+    matchedElements[currentHighlightedIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
 }
+
+
+
+
 // Reset the 'brighten' class from previously highlighted elements
   function resetBrighten() {
   const elementsToReset = document.querySelectorAll(".brighten");
