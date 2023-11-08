@@ -73,16 +73,15 @@ function selectInput(list, keyword) {
 }
 
 function search() {
+  const searchWord = inputBox.value.trim()
   const keyword = inputBox.value.trim().toUpperCase();
   if (keyword.length) {
     searchImage(keyword);
     searchText(keyword);
 
-  // Capitalize the first letter and make the rest lowercase
-  const formattedKeyword = keyword.charAt(0).toUpperCase() + keyword.slice(1).toLowerCase();
   const numResults = getNumResults(keyword);
 
-  resultsBox.innerHTML = `Found ${numResults} results for "${formattedKeyword}"`;
+  resultsBox.innerHTML = `Found ${numResults} results for "${searchWord}"`;
       // Make the .result-box visible
       resultsBox.style.display = "inline-block";
     } else {
