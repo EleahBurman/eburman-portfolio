@@ -1371,6 +1371,10 @@ main {
 }
 
 @media screen and (max-width: 375px){
+  .last-description{
+    margin-top: 0px;
+  }
+  
   .container{
     margin-left:25px;
   }
