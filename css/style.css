@@ -14,6 +14,7 @@ body {
   --lightteal: rgb(98, 204, 211);
   --darkteal: rgb(0, 123, 132);
   --darkerteal: rgb(1, 97, 104);
+  --yellow: #ffc007;
   background-color: var(--teal);
   color: rgb(255,255,255);
   font-family: 'Roboto', sans-serif;
@@ -150,8 +151,8 @@ input#input-box:focus::placeholder {
 .search-box {
   width: 0;
   overflow: hidden;
-  transition: transform 0.5s ease-in-out;
-  transform-origin: left;
+  transition: transform 2s ease-in-out;
+  transform-origin: right;
   transform: scaleX(0);
 }
 
@@ -711,11 +712,11 @@ main {
 }
 
 #portfolio-name{
-  color: #ffc007;
+  color: var(--yelow);
 }
 
 .new-project-card-title:hover{
-  color: #ffc007;
+  color: var(--yelow);
 }
 
 .github-project-img:hover{
@@ -1374,7 +1375,7 @@ main {
   .last-description{
     margin-top: 0px;
   }
-  
+
   .container{
     margin-left:25px;
   }
