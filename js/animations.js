@@ -92,6 +92,28 @@ function handleIntersectForResumeContent(entries, observer) {
     });
 }
 
+/*---- Work Info Animation ----*/
+const workInfo = document.querySelector(".work-info");
+
+const workInfoOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5,
+};
+
+const workInfoObserver = new IntersectionObserver(handleIntersectForWorkInfo, workInfoOptions);
+
+workInfoObserver.observe(workInfo);
+
+function handleIntersectForWorkInfo(entries, observer) {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("animatework"); // Replace "animating" with the appropriate class name
+            workInfoObserver.unobserve(entry.target); // Stop observing once animation is triggered
+        }
+    });
+}
+
 /*---- About Info Animation ----*/
 const aboutInfo = document.querySelector(".about-info");
 

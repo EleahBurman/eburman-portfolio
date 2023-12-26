@@ -792,7 +792,7 @@ main {
   margin: 20px;
 }
 
-.about-info {
+.about-info, .work-info {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -801,9 +801,16 @@ main {
   opacity: 0;
   transform: translateY(100px);
   transition: opacity 1s, transform 1.3s;
+  width: 60%;
 }
 
 .about-info.animating{
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeInAndRaise 1.3s ease-in-out;
+}
+
+.work-info.animatework{
   opacity: 1;
   transform: translateY(0);
   animation: fadeInAndRaise 1.3s ease-in-out;
@@ -874,10 +881,14 @@ main {
   color: white;
 }
 
-.about-image {
+.about-image, .work-image {
   width: 250px;
   height: 250px;
   border-radius: 50%;
+}
+
+.work-image{
+  filter: invert(100%);
 }
 
 
@@ -1200,7 +1211,7 @@ main {
     min-width: 300px;
   }
 
-  .about-image {
+  .about-image, .work-image {
     width: 200px;
     height: 200px;
     border-radius: 50%;
