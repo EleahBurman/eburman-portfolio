@@ -5,6 +5,8 @@ const availableKeywords = [
   'Express',
   'React',
   'CSS',
+  'Pandas',
+  'Camelot',
   'Resume',
   'Project',
   'Projects',
