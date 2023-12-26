@@ -224,7 +224,7 @@ input#input-box:focus::placeholder {
 .nav-link{
   color: rgb(255,255,255);
   text-decoration: none;
-  padding: 8px 15px;
+  padding: 8px 8px;
   border-radius: 20px;
   transition: ease 0.5s;
 }
@@ -792,7 +792,7 @@ main {
   margin: 20px;
 }
 
-.about-info, .work-info {
+.about-info, .work-info, .awards-info {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -803,7 +803,7 @@ main {
   transition: opacity 1s, transform 1.3s;
 }
 
-.work-info{
+.work-info, .awards-info{
   width: 60%;
 }
 
@@ -814,6 +814,12 @@ main {
 }
 
 .work-info.animatework{
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeInAndRaise 1.3s ease-in-out;
+}
+
+.awards-info.animateawards{
   opacity: 1;
   transform: translateY(0);
   animation: fadeInAndRaise 1.3s ease-in-out;
@@ -884,13 +890,19 @@ main {
   color: white;
 }
 
-.about-image, .work-image {
+.about-image, .work-image{
   width: 250px;
   height: 250px;
   border-radius: 50%;
 }
 
 .work-image{
+  filter: invert(100%);
+}
+
+.awards-image{
+  width: 250px;
+  height: 250px;
   filter: invert(100%);
 }
 

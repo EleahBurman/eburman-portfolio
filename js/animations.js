@@ -114,6 +114,28 @@ function handleIntersectForWorkInfo(entries, observer) {
     });
 }
 
+/*---- Awards Info Animation ----*/
+const awardsInfo = document.querySelector(".awards-info");
+
+const awardsInfoOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5,
+};
+
+const awardsInfoObserver = new IntersectionObserver(handleIntersectForAwardsInfo, awardsInfoOptions);
+
+awardsInfoObserver.observe(awardsInfo);
+
+function handleIntersectForAwardsInfo(entries, observer) {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("animateawards"); // Replace "animating" with the appropriate class name
+            workInfoObserver.unobserve(entry.target); // Stop observing once animation is triggered
+        }
+    });
+}
+
 /*---- About Info Animation ----*/
 const aboutInfo = document.querySelector(".about-info");
 
