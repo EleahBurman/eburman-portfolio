@@ -801,6 +801,9 @@ main {
   opacity: 0;
   transform: translateY(100px);
   transition: opacity 1s, transform 1.3s;
+}
+
+.work-info{
   width: 60%;
 }
 
