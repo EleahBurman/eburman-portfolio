@@ -7,6 +7,7 @@ const availableKeywords = [
   'CSS',
   'Pandas',
   'Camelot',
+  'Java',
   'Resume',
   'Project',
   'Projects',
@@ -95,7 +96,7 @@ function search() {
 
 // Function to count the number of results
 function getNumResults(keyword) {
-  const elementsToSearch = document.querySelectorAll(".about-text, .new-project-description");
+  const elementsToSearch = document.querySelectorAll(".about-text, .work-text, .partial-description, .full-description, .new-project-description");
   const imageElementsToSearch = document.querySelectorAll(".scroll, .badge, .languages, .screenshot, .column-icon");
 
   let count = 0;
@@ -169,7 +170,7 @@ function searchImage(keyword) {
 
 // Perform the search and apply highlighting for text
 function searchText(keyword) {
-  const elementsToSearch = document.querySelectorAll(".partial-description, .full-description, .about-text");
+  const elementsToSearch = document.querySelectorAll(".partial-description, .full-description, .about-text, .work-text");
 
   elementsToSearch.forEach((element) => {
     const content = element.textContent;
