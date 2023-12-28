@@ -712,11 +712,12 @@ main {
 }
 
 #portfolio-name{
-  color: var(--yelow);
+  color: var(--yellow);
+
 }
 
 .new-project-card-title:hover{
-  color: var(--yelow);
+  color: var(--yellow);
 }
 
 .github-project-img:hover{
