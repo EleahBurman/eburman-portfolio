@@ -725,6 +725,12 @@ main {
   margin-bottom: 20px;
 }
 
+.about-card{
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+  border-radius: 8px;
+  width: 554px;
+}
+
 .new-project-card-title{
   font-size:36px;
   margin-left: 6px;
@@ -1015,6 +1021,10 @@ main {
     width: 311px;
     height: 311px;
     padding-left: 35px;
+  }
+
+  .about-card{
+    width: 311px;
   }
 
   .last-project{
