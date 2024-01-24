@@ -699,6 +699,25 @@ main {
   margin-left: 5%;
 }
 
+.about-description{
+  border-radius: 8px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+  padding: 5px;
+  transition: opacity 1s, transform 1.3s;
+  text-align: center;
+  padding: 5px;
+  justify-content: center;
+  margin: auto;
+  width: 50%;
+}
+
+.about-text {
+  text-align: center;
+  font-size: 1.17em;
+  width: 100%;
+  margin: auto;
+}
+
 .project-card{
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
   border-radius: 8px;
@@ -828,11 +847,6 @@ main {
   animation: fadeInAndRaise 1.3s ease-in-out;
 }
 
-.about-text {
-  text-align: center;
-  font-size: 1.17em;
-  width: 50%;
-}
 
 .up-arrow {
   width: 20px;
