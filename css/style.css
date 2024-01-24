@@ -932,7 +932,7 @@ main {
 
 .arrow-pdf-to-csv {
   position: relative; /* Make the arrow's position relative for the pseudo-element */
-  width: 50px;
+  width: 30px;
   height: 10px;
   background-color: yellow;
   transform-origin: 0 50%;
@@ -994,13 +994,22 @@ main {
   display:none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1300px) {
+  #csvImage {
+    display: flex; /* Show the CSV image */
+  }
+
+  #pdfImage {
+    display: none; /* Hide the PDF image */
+  }
+
   .arrow-container{
-    visibility: hidden;
+    display: none;
   }
-  #pdfImage{
-    visibility: hidden;
-  }
+}
+
+@media screen and (max-width: 768px) {
+
 
   .project-card{
     width: 311px;
