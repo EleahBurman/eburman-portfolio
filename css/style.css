@@ -897,8 +897,56 @@ main {
   border-radius: 50%;
 }
 
-.work-image{
+#csvImage{
   filter: invert(100%);
+  margin-left: 50px;
+}
+
+#pdfImage{
+  filter: grayscale(100) contrast(300%);
+  
+}
+
+.arrow-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.arrow-pdf-to-csv {
+  position: relative; /* Make the arrow's position relative for the pseudo-element */
+  width: 50px;
+  height: 10px;
+  background-color: yellow;
+  transform-origin: 0 50%;
+  position: absolute;
+  animation: arrowAnimation 2s infinite;
+  left: -50px;
+  bottom: 10px;
+}
+
+.arrow-pdf-to-csv::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(100%, -50%);
+  border: 5px solid transparent;
+  border: 8px solid transparent;
+  border-left-color: yellow;
+}
+
+@keyframes arrowAnimation {
+  0% {
+    transform: scaleX(0);
+  }
+  50% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
 }
 
 .awards-image{
@@ -931,6 +979,12 @@ main {
 }
 
 @media screen and (max-width: 768px) {
+  .arrow-container{
+    visibility: hidden;
+  }
+  #pdfImage{
+    visibility: hidden;
+  }
 
   .project-card{
     width: 311px;

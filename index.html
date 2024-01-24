@@ -15,6 +15,7 @@
   <script defer src="./js/dropdownMouseEvents.js"></script>
   <script defer src="./js/startListening.js"></script>
   <script defer src="./js/animations.js"></script>
+  <script defer src="./js/animateArrow.js"></script>
   <script defer src="./js/readMore.js"></script>
   <script defer src="./js/enlarge.js"></script>
 
@@ -39,21 +40,24 @@
       </a>
       <div class="projects-dropdown-content">
         <!-- Project 1 -->
-        <a href="https://dragqueencollector.fly.dev/" target="_blank">Drag Queen Collector</a>
-        
-        <!-- Project 5 -->
-        <a href="https://caffeinate-me.fly.dev/" target="_blank">Caffeinate Me</a>
+        <a href="https://budget-buddy-8ffdb6a186ee.herokuapp.com/" target="_blank">Budget Buddy</a>
 
         <!-- Project 2 -->
-        <a href="https://bitebuddyapp.netlify.app/" target="_blank">Bite Buddy</a>
+        <a href="https://dragqueencollector.fly.dev/" target="_blank">Drag Queen Collector</a>
+        
+        <!-- Project 3 -->
+        <a href="https://caffeinate-me.fly.dev/" target="_blank">Caffeinate Me</a>
 
         <!-- Project 4 -->
+        <a href="https://bitebuddyapp.netlify.app/" target="_blank">Bite Buddy</a>
+
+        <!-- Project 5 -->
         <a href="https://catvscatlady.surge.sh/" target="_blank">Cat Vs Cat Lady</a>
 
-        <!-- Project 3 -->
+        <!-- Project 6 -->
         <a href="https://rainbowwords.netlify.app/" target="_blank">Rainbow Words</a>
 
-        <!-- Project 6 -->
+        <!-- Project 7 -->
         <a href="https://eleahburmanportfolio.fly.dev/" target="_blank">Eleah Burman Portfolio</a>
       </div>
     </div>
@@ -143,248 +147,294 @@
       </div>
       
 
-
         <!-- Project 1 -->
-        <div class="project-card">
-          <div class="newproject">
-            <div class="new-title">
-              <div class="new-column">
-                <a class="new-project-link project-github" href="https://github.com/EleahBurman/drag-queen-collector" target="_blank">
-                  <img src="./assets/images/icons/github-icon.png" class="github-project-img" alt="github icon">
-                </a>
-              </div>
-
-              <div class="new-column">
-                <a class="new-project-link new-project-card-title first-title" id="first-project-title" href="https://dragqueencollector.fly.dev/" target="_blank">Drag Queen Collector</a>
-              </div>
-            </div>
-            
-            <div class="new-row">
-              <div class="new-column column-bg first-column">
-                <a href="https://www.python.org/doc/"><img src="./assets/images/icons/python-icon.png" alt="python icon" class="column-icon python-icon first-project-icon"></a>
-                <a href="https://docs.djangoproject.com/en/4.2/"><img src="./assets/images/icons/django-icon.png" alt="django icon" class="column-icon django-icon"></a>
-                <a href="https://www.postgresql.org/docs/"><img src="./assets/images/icons/postgresql-icon.png" alt="postgreSQL icon" class="column-icon postgresql-icon"></a>
-                <a href="https://docs.aws.amazon.com/"><img src="./assets/images/icons/aws-icon.png" alt="aws icon" class="column-icon"></a>
-              </div>
-      
-              <div class="new-column">
-                <div class="lightbox-container" src="assets/images/drag-queen-collector-ss.png">
-                  <img class="new-screenshot first-screenshot" id="first-screenshot" src="assets/images/drag-queen-collector-ss.png" alt="Drag Queen Collector" onclick="openLightbox(this)">
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <div class="project-description">
-            <div class="partial-description">
-              A Python/Django application, utilizing AWS, where you collect drag queens, dress drag queens, and create their performance schedule.
-            </div>
-
-            <div class="full-description">
-              A Python/Django application, utilizing AWS, where you collect drag queens, dress drag queens, and create their performance schedule. Designed to empower drag enthusiasts in curating their ultimate collection of favorite queens.
-            </div>
-            
-            <button class="read-more">Read More</button>
-
-          </div>
-
-      </div>
-        <!-- End of Project 1 -->
-    
-        <!-- Project 2 -->
-        <div class="project-card">
-
-          <div class="newproject">
-            <div class="new-title">
-              <a class="new-project-link project-github" href="https://github.com/EleahBurman/caffeinate-me" target="_blank">
+      <div class="project-card">
+        <div class="newproject">
+          <div class="new-title">
+            <div class="new-column">
+              <a class="new-project-link project-github" href="https://github.com/EleahBurman/budget-app" target="_blank">
                 <img src="./assets/images/icons/github-icon.png" class="github-project-img" alt="github icon">
               </a>
-              <a class="new-project-link new-project-card-title" href="https://caffeinate-me.fly.dev/" target="_blank">Caffeinate Me</a>
             </div>
-            
-            <div class="new-row">
-              <div class="new-column column-bg">
-                <a href="https://expressjs.com/"><img src="./assets/images/icons/express-big-icon.png" alt="express icon" class="column-icon express-icon first-project-icon"></a>
-                <a href="https://www.mongodb.com/docs/"><img src="./assets/images/icons/mongodb-big-icon.png" alt="mongodb icon" class="column-icon mongodb-icon"></a>
-                <a href="https://nodejs.org/en/docs"><img src="./assets/images/icons/nodejs-big-icon.png" alt="node js icon" class="column-icon nodejs-icon"></a>
-              </div>
-              <div class="new-column">
-                <img class="new-screenshot" src="./assets/images/caffeinate.png" alt="Caffeinate Me" onclick="openLightbox(this)">
-              </div>
+
+            <div class="new-column">
+              <a class="new-project-link new-project-card-title first-title" id="first-project-title" href="https://budget-buddy-8ffdb6a186ee.herokuapp.com/" target="_blank">Budget Buddy</a>
             </div>
           </div>
-
-          <div class="project-description">
-            <div class="partial-description">
-              Explore the world of cafes with this open-source MEAN stack application.
-            </div>
-
-            <div class="full-description">
-              Explore the world of cafes with this open-source MEAN stack application.  Connect with coffee enthusiasts and personalize your profile with GIFs and a unique color scheme. Integrated with Google OAuth for easy access and friend connections.
-            </div>
-            
-            <button class="read-more">Read More</button>
-
-          </div>
-
-      </div>
-        <!-- End of Project 2 -->
-
-                <!-- Project 3 -->
-                <div class="project-card">
-                  <div class="newproject">
-                    <div class="new-title">
-                      <a class="new-project-link project-github" href="https://github.com/EleahBurman/bite-buddy-front-end" target="_blank">
-                        <img src="./assets/images/icons/github-icon.png" class="github-project-img" alt="github icon">
-                      </a>
-                      <a class="new-project-link new-project-card-title" href="https://bitebuddyapp.netlify.app/" target="_blank">Bite Buddy</a>
-                    </div>
-                    
-                    <div class="new-row">
-                      <div class="new-column column-bg">
-                        <a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started"><img src="./assets/images/icons/react-big-icon.png" alt="react icon" class="column-icon react-icon first-project-icon"></a>
-                        <a href="https://nodejs.org/en/docs"><img src="./assets/images/icons/nodejs-big-icon.png" alt="node js icon" class="column-icon node-js-icon"></a>
-                        <a href="https://www.mongodb.com/docs/"><img src="./assets/images/icons/mongodb-big-icon.png" alt="mongodb icon" class="column-icon mongo-db-icon"></a>
-                      </div>
-                      <div class="new-column">
-                        <img class="new-screenshot" src="./assets/images/bite-buddy-chicken.png" alt="Bite Buddy" onclick="openLightbox(this)">
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="project-description">
-                    <div class="partial-description">
-                      Ignite your culinary creativity with our React-based group project, leveraging an API to curate customized recipe boards.
-                    </div>
           
-                    <div class="full-description">
-                      Ignite your culinary creativity with our React-based group project, leveraging an API to curate customized recipe boards.  We were able to use the API Edamam to gain access to thousands of recipes, and their allergies specifications, meal type and cuisine type.
-                    </div>
-                    
-                    <button class="read-more">Read More</button>
-          
-                  </div>
-              </div>
-                <!-- End of Project 3 -->
-
-        <!-- Project 4 -->
-        <div class="project-card">
-          <div class="newproject">
-            <div class="new-title">
-              <a class="new-project-link project-github" href="https://github.com/EleahBurman/cat-catlady" target="_blank">
-                <img src="./assets/images/icons/github-icon.png" class="github-project-img" alt="github icon">
-              </a>
-              <a class="new-project-link new-project-card-title" href="https://catvscatlady.surge.sh/" target="_blank">Cat Vs Cat Lady</a>
+          <div class="new-row">
+            <div class="new-column column-bg first-column">
+              <a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started"><img src="./assets/images/icons/react-big-icon.png" alt="react icon" class="column-icon react-icon first-project-icon"></a>
+              <a href="https://nodejs.org/en/docs"><img src="./assets/images/icons/nodejs-big-icon.png" alt="node js icon" class="column-icon node-js-icon"></a>
+              <a href="https://www.mongodb.com/docs/"><img src="./assets/images/icons/mongodb-big-icon.png" alt="mongodb icon" class="column-icon mongo-db-icon"></a>
             </div>
-            
-            <div class="new-row">
-              <div class="new-column column-bg">
-                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="./assets/images/icons/javascript-big-icon.png" alt="javascript icon" class="column-icon javascript-icon first-project-icon"></a>
-                <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"><img src="./assets/images/icons/html-big-icon.png" alt="html icon" class="column-icon html-icon"></a>
-                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img src="./assets/images/icons/css-big-icon.png" alt="css icon" class="column-icon css-icon"></a>
-              </div>
-              <div class="new-column">
-                <img class="new-screenshot" id="cat-vs-catlady" src="./assets/images/cat-catlady-screenshot.png" alt="Cat Vs Cat Lady" onclick="openLightbox(this)">
-
-
-              </div>
-            </div>
-          </div>
-
-          <div class="project-description">
-            <div class="partial-description">
-              Play against a computer or a human, as either a cat, or frustrated cat lady in the classic game of tic-tac-toe featuring vanilla JavaScript, HTML and CSS.
-            </div>
-
-            <div class="full-description">
-              Play against a computer or a human, as either a cat, or frustrated cat lady in the classic game of tic-tac-toe featuring vanilla JavaScript, HTML and CSS.  Cat emojis fly from the top of the screen to declare the winner.
-            </div>
-            
-            <button class="read-more">Read More</button>
-
-          </div>
-        </div>
-        <!-- End of Project 4 -->
-
-        <!-- Project 5 -->
-        <div class="project-card">
-          <div class="newproject">
-            <div class="new-title">
-              <a class="new-project-link project-github" href="https://github.com/EleahBurman/rainbowwords" target="_blank">
-                <img src="./assets/images/icons/github-icon.png" class="github-project-img" alt="github icon">
-              </a>
-              <a class="new-project-link new-project-card-title" href="https://rainbowwords.netlify.app/" target="_blank">Rainbow Words</a>
-            </div>
-
-
-            
-            <div class="new-row">
-              <div class="new-column column-bg">
-                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="./assets/images/icons/javascript-big-icon.png" alt="javascript icon" class="column-icon javascript-icon first-project-icon"></a>
-                <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"><img src="./assets/images/icons/html-big-icon.png" alt="html icon" class="column-icon html-icon"></a>
-                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img src="./assets/images/icons/css-big-icon.png" alt="css icon" class="column-icon"></a>
-              </div>
-              <div class="new-column">
-                <img class="new-screenshot" src="./assets/images/rainbow-words-new.png" alt="Rainbow Words" onclick="openLightbox(this)">
-
-              </div>
-            </div>
-          </div>
-
-          <div class="project-description">
-            <div class="partial-description">
-              A word search using JavaScript, HTML, and CSS.
-            </div>
-
-            <div class="full-description">
-              A word search using JavaScript, HTML, and CSS that awards the user a trophy depending on how many turns it takes for the user to find all the words.
-            </div>
-            
-            <button class="read-more">Read More</button>
-
-          </div>
-        </div>
-        <!-- End of Project 5 -->
     
-        <!-- Project 6 -->
-        <div class="project-card">
-          <div class="newproject">
-            <div class="new-title last-project">
-              <a class="new-project-link project-github" href="https://github.com/EleahBurman/eburman-portfolio" target="_blank">
-                <img src="./assets/images/icons/github-icon.png" class="github-project-img" alt="github icon">
-              </a>
-              <a class="new-project-link new-project-card-title" href="https://eleahburmanportfolio.fly.dev/" target="_blank">Eleah Burman Portfolio</a>
-            </div>
-            
-            <div class="new-row">
-              <div class="new-column column-bg">
-                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="./assets/images/icons/javascript-big-icon.png" alt="javascript icon" class="column-icon javascript-icon first-project-icon"></a>
-                <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"><img src="./assets/images/icons/html-big-icon.png" alt="html icon" class="column-icon html-icon"></a>
-                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img src="./assets/images/icons/css-big-icon.png" alt="css icon" class="column-icon css-icon"></a>
-              </div>
-              <div class="new-column">
-                <img class="new-screenshot" src="./assets/images/portfolio-ss.png" alt="Eleah Burman Portfolio" onclick="openLightbox(this)">
-
+            <div class="new-column">
+              <div class="lightbox-container" src="assets/images/budget-buddy-ss.png">
+                <img class="new-screenshot first-screenshot" id="first-screenshot" src="assets/images/budget-buddy-ss.png" alt="Budget Buddy" onclick="openLightbox(this)">
               </div>
             </div>
-          </div>
-
-          <div class="project-description last-description">
-            <div class="partial-description">
-              Eleah Burman's coding portfolio, showcasing an impressive collection of her diverse and creative coding projects.
-            </div>
-
-            <div class="full-description">
-              Eleah Burman's coding portfolio, showcasing an impressive collection of her diverse and creative coding projects. It features voice search, language and framework filtering, and easy section navigation.
-            </div>
-            
-            <button class="read-more">Read More</button>
 
           </div>
         </div>
-        <!-- End of Project 6 -->
+
+        <div class="project-description">
+          <div class="partial-description">
+            A Node.js and React user-friendly platform enabling users to create personalized budgets in their preferred currency and effortlessly add expenses to align with financial objectives.
+          </div>
+
+          <div class="full-description">
+            A Node.js and React user-friendly platform enabling users to create personalized budgets in their preferred currency and effortlessly add expenses to align with financial objectives that uses cookies and refresh tokens for security.
+          </div>
+          
+          <button class="read-more">Read More</button>
+
+        </div>
+
       </div>
+      <!-- End of Project 1 -->
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <div class="newproject">
+          <div class="new-title">
+            <div class="new-column">
+              <a class="new-project-link project-github" href="https://github.com/EleahBurman/drag-queen-collector" target="_blank">
+                <img src="./assets/images/icons/github-icon.png" class="github-project-img" alt="github icon">
+              </a>
+            </div>
+
+            <div class="new-column">
+              <a class="new-project-link new-project-card-title first-title" href="https://dragqueencollector.fly.dev/" target="_blank">Drag Queen Collector</a>
+            </div>
+          </div>
+          
+          <div class="new-row">
+            <div class="new-column column-bg first-column">
+              <a href="https://www.python.org/doc/"><img src="./assets/images/icons/python-icon.png" alt="python icon" class="column-icon python-icon first-project-icon"></a>
+              <a href="https://docs.djangoproject.com/en/4.2/"><img src="./assets/images/icons/django-icon.png" alt="django icon" class="column-icon django-icon"></a>
+              <a href="https://www.postgresql.org/docs/"><img src="./assets/images/icons/postgresql-icon.png" alt="postgreSQL icon" class="column-icon postgresql-icon"></a>
+              <a href="https://docs.aws.amazon.com/"><img src="./assets/images/icons/aws-icon.png" alt="aws icon" class="column-icon"></a>
+            </div>
+    
+            <div class="new-column">
+              <div class="lightbox-container" src="assets/images/drag-queen-collector-ss.png">
+                <img class="new-screenshot first-screenshot" id="first-screenshot" src="assets/images/drag-queen-collector-ss.png" alt="Drag Queen Collector" onclick="openLightbox(this)">
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="project-description">
+          <div class="partial-description">
+            A Python and Django application, utilizing AWS, where you collect drag queens, dress drag queens, and create their performance schedule.
+          </div>
+
+          <div class="full-description">
+            A Python and Django application, utilizing AWS, where you collect drag queens, dress drag queens, and create their performance schedule. Designed to empower drag enthusiasts in curating their ultimate collection of favorite queens.
+          </div>
+          
+          <button class="read-more">Read More</button>
+
+        </div>
+
+      </div>
+      <!-- End of Project 2 -->
+    
+      <!-- Project 3 -->
+      <div class="project-card">
+
+        <div class="newproject">
+          <div class="new-title">
+            <a class="new-project-link project-github" href="https://github.com/EleahBurman/caffeinate-me" target="_blank">
+              <img src="./assets/images/icons/github-icon.png" class="github-project-img" alt="github icon">
+            </a>
+            <a class="new-project-link new-project-card-title" href="https://caffeinate-me.fly.dev/" target="_blank">Caffeinate Me</a>
+          </div>
+          
+          <div class="new-row">
+            <div class="new-column column-bg">
+              <a href="https://expressjs.com/"><img src="./assets/images/icons/express-big-icon.png" alt="express icon" class="column-icon express-icon first-project-icon"></a>
+              <a href="https://www.mongodb.com/docs/"><img src="./assets/images/icons/mongodb-big-icon.png" alt="mongodb icon" class="column-icon mongodb-icon"></a>
+              <a href="https://nodejs.org/en/docs"><img src="./assets/images/icons/nodejs-big-icon.png" alt="node js icon" class="column-icon nodejs-icon"></a>
+            </div>
+            <div class="new-column">
+              <img class="new-screenshot" src="./assets/images/caffeinate.png" alt="Caffeinate Me" onclick="openLightbox(this)">
+            </div>
+          </div>
+        </div>
+
+        <div class="project-description">
+          <div class="partial-description">
+            Explore the world of cafes with this open-source MEAN stack (Node.js, Express and MongoDB) application.
+          </div>
+
+          <div class="full-description">
+            Explore the world of cafes with this open-source MEAN stack (Node.js, Express and MongoDB) application.  Connect with coffee enthusiasts and personalize your profile with GIFs and a unique color scheme. Integrated with Google OAuth for easy access and friend connections.
+          </div>
+          
+          <button class="read-more">Read More</button>
+
+        </div>
+
+      </div>
+      <!-- End of Project 3 -->
+
+      <!-- Project 4 -->
+      <div class="project-card">
+        <div class="newproject">
+          <div class="new-title">
+            <a class="new-project-link project-github" href="https://github.com/EleahBurman/bite-buddy-front-end" target="_blank">
+              <img src="./assets/images/icons/github-icon.png" class="github-project-img" alt="github icon">
+            </a>
+            <a class="new-project-link new-project-card-title" href="https://bitebuddyapp.netlify.app/" target="_blank">Bite Buddy</a>
+          </div>
+          
+          <div class="new-row">
+            <div class="new-column column-bg">
+              <a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started"><img src="./assets/images/icons/react-big-icon.png" alt="react icon" class="column-icon react-icon first-project-icon"></a>
+              <a href="https://nodejs.org/en/docs"><img src="./assets/images/icons/nodejs-big-icon.png" alt="node js icon" class="column-icon node-js-icon"></a>
+              <a href="https://www.mongodb.com/docs/"><img src="./assets/images/icons/mongodb-big-icon.png" alt="mongodb icon" class="column-icon mongo-db-icon"></a>
+            </div>
+            <div class="new-column">
+              <img class="new-screenshot" src="./assets/images/bite-buddy-chicken.png" alt="Bite Buddy" onclick="openLightbox(this)">
+            </div>
+          </div>
+        </div>
+
+        <div class="project-description">
+          <div class="partial-description">
+            Ignite your culinary creativity with our React-based group project, leveraging an API to curate customized recipe boards.
+          </div>
+
+          <div class="full-description">
+            Ignite your culinary creativity with our React-based group project, leveraging an API to curate customized recipe boards.  We were able to use the API Edamam to gain access to thousands of recipes, and their allergies specifications, meal type and cuisine type.
+          </div>
+          
+          <button class="read-more">Read More</button>
+
+        </div>
+      </div>
+      <!-- End of Project 4 -->
+
+      <!-- Project 5 -->
+      <div class="project-card">
+        <div class="newproject">
+          <div class="new-title">
+            <a class="new-project-link project-github" href="https://github.com/EleahBurman/cat-catlady" target="_blank">
+              <img src="./assets/images/icons/github-icon.png" class="github-project-img" alt="github icon">
+            </a>
+            <a class="new-project-link new-project-card-title" href="https://catvscatlady.surge.sh/" target="_blank">Cat Vs Cat Lady</a>
+          </div>
+          
+          <div class="new-row">
+            <div class="new-column column-bg">
+              <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="./assets/images/icons/javascript-big-icon.png" alt="javascript icon" class="column-icon javascript-icon first-project-icon"></a>
+              <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"><img src="./assets/images/icons/html-big-icon.png" alt="html icon" class="column-icon html-icon"></a>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img src="./assets/images/icons/css-big-icon.png" alt="css icon" class="column-icon css-icon"></a>
+            </div>
+            <div class="new-column">
+              <img class="new-screenshot" id="cat-vs-catlady" src="./assets/images/cat-catlady-screenshot.png" alt="Cat Vs Cat Lady" onclick="openLightbox(this)">
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="project-description">
+          <div class="partial-description">
+            Play against a computer or a human, as either a cat, or frustrated cat lady in the classic game of tic-tac-toe featuring vanilla JavaScript, HTML and CSS.
+          </div>
+
+          <div class="full-description">
+            Play against a computer or a human, as either a cat, or frustrated cat lady in the classic game of tic-tac-toe featuring vanilla JavaScript, HTML and CSS.  Cat emojis fly from the top of the screen to declare the winner.
+          </div>
+          
+          <button class="read-more">Read More</button>
+
+        </div>
+      </div>
+      <!-- End of Project 5 -->
+
+      <!-- Project 6 -->
+      <div class="project-card">
+        <div class="newproject">
+          <div class="new-title">
+            <a class="new-project-link project-github" href="https://github.com/EleahBurman/rainbowwords" target="_blank">
+              <img src="./assets/images/icons/github-icon.png" class="github-project-img" alt="github icon">
+            </a>
+            <a class="new-project-link new-project-card-title" href="https://rainbowwords.netlify.app/" target="_blank">Rainbow Words</a>
+          </div>
+
+
+          
+          <div class="new-row">
+            <div class="new-column column-bg">
+              <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="./assets/images/icons/javascript-big-icon.png" alt="javascript icon" class="column-icon javascript-icon first-project-icon"></a>
+              <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"><img src="./assets/images/icons/html-big-icon.png" alt="html icon" class="column-icon html-icon"></a>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img src="./assets/images/icons/css-big-icon.png" alt="css icon" class="column-icon"></a>
+            </div>
+            <div class="new-column">
+              <img class="new-screenshot" src="./assets/images/rainbow-words-new.png" alt="Rainbow Words" onclick="openLightbox(this)">
+
+            </div>
+          </div>
+        </div>
+
+        <div class="project-description">
+          <div class="partial-description">
+            A word search using JavaScript, HTML, and CSS.
+          </div>
+
+          <div class="full-description">
+            A word search using JavaScript, HTML, and CSS that awards the user a trophy depending on how many turns it takes for the user to find all the words.
+          </div>
+          
+          <button class="read-more">Read More</button>
+
+        </div>
+      </div>
+      <!-- End of Project 6 -->
+  
+      <!-- Project 7 -->
+      <div class="project-card">
+        <div class="newproject">
+          <div class="new-title last-project">
+            <a class="new-project-link project-github" href="https://github.com/EleahBurman/eburman-portfolio" target="_blank">
+              <img src="./assets/images/icons/github-icon.png" class="github-project-img" alt="github icon">
+            </a>
+            <a class="new-project-link new-project-card-title" href="https://eleahburmanportfolio.fly.dev/" target="_blank">Eleah Burman Portfolio</a>
+          </div>
+          
+          <div class="new-row">
+            <div class="new-column column-bg">
+              <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="./assets/images/icons/javascript-big-icon.png" alt="javascript icon" class="column-icon javascript-icon first-project-icon"></a>
+              <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"><img src="./assets/images/icons/html-big-icon.png" alt="html icon" class="column-icon html-icon"></a>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img src="./assets/images/icons/css-big-icon.png" alt="css icon" class="column-icon css-icon"></a>
+            </div>
+            <div class="new-column">
+              <img class="new-screenshot" src="./assets/images/portfolio-ss.png" alt="Eleah Burman Portfolio" onclick="openLightbox(this)">
+
+            </div>
+          </div>
+        </div>
+
+        <div class="project-description last-description">
+          <div class="partial-description">
+            Eleah Burman's coding portfolio, showcasing an impressive collection of her diverse and creative coding projects.
+          </div>
+
+          <div class="full-description">
+            Eleah Burman's coding portfolio, showcasing an impressive collection of her diverse and creative coding projects. It features voice search, language and framework filtering, and easy section navigation.
+          </div>
+          
+          <button class="read-more">Read More</button>
+
+        </div>
+      </div>
+      <!-- End of Project 7 -->
+    </div>
     </section>
     
 
@@ -422,7 +472,14 @@
     <section id="work" class="section">
       <p class="title"><span>Work Experience</span></p>
       <div class="work-info">
-        <img src="./assets/images/icons/csv.png" alt="CSV to PDF - Python Pandas and Camelot" class="work-image">
+        <div class="flex-horizontal">
+          <img src="./assets/images/icons/pdf-logo.png" alt="PDF" class="work-image" id="pdfImage">
+          <div class="arrow-container">
+            <div class="arrow-pdf-to-csv" id="animatedArrow"></div>
+          </div>
+          <img src="./assets/images/icons/csv.png" alt="CSV" class="work-image" id="csvImage">
+        </div>
+
         <p class="work-text">
           At TMHCC, Eleah automated manual reporting utilizing Python, Java, Camelot, and Pandas to seamlessly generate CSV files from PDFs, streamlining Risk Management for the insurance team.
         </p>
