@@ -711,7 +711,8 @@ main {
   margin-left: 6px;
 }
 
-#portfolio-name{
+#portfolio-name,
+#above{
   color: var(--yellow);
 
 }
