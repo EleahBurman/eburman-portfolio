@@ -919,6 +919,10 @@ main {
   border-radius: 50%;
 }
 
+.about-image{
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+}
+
 #csvImage{
   filter: invert(100%);
   margin-left: 50px;
@@ -938,7 +942,7 @@ main {
 
 .arrow-pdf-to-csv {
   position: relative; /* Make the arrow's position relative for the pseudo-element */
-  width: 30px;
+  width: 20px;
   height: 10px;
   background-color: yellow;
   transform-origin: 0 50%;
