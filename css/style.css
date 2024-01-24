@@ -739,8 +739,13 @@ main {
 #portfolio-name,
 #above, 
 #tokiomarinehcc,
-#second{
+#second, 
+.linkedin-post{
   color: var(--yellow);
+}
+
+.linkedin-post:hover{
+  color: white;
 }
 
 .new-project-card-title:hover{
