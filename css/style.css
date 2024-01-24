@@ -712,9 +712,10 @@ main {
 }
 
 #portfolio-name,
-#above{
+#above, 
+#tokiomarinehcc,
+#second{
   color: var(--yellow);
-
 }
 
 .new-project-card-title:hover{
