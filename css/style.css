@@ -744,6 +744,7 @@ main {
   color: var(--yellow);
 }
 
+
 .linkedin-post:hover{
   color: white;
 }
@@ -759,7 +760,11 @@ main {
 .github-project-img:hover{
   box-shadow: 0px 0px 2px 2px rgb(255, 255, 255);
 }
-/* end of new project css */
+
+#backend, #fullstack, #python{
+  color: var(--yellow);
+  font-style: italic;
+}
 
 
 .contact-resume-container {
