@@ -748,6 +748,10 @@ main {
   color: white;
 }
 
+.linkedin-post:visited{
+  color: var(--yellow);
+}
+
 .new-project-card-title:hover{
   color: var(--yellow);
 }
