@@ -6,4 +6,4 @@ const arrow = document.getElementById('animatedArrow');
 
 const distance = csvImage.offsetLeft - (pdfImage.offsetLeft + pdfImage.offsetWidth);
 
-arrow.style.width = `${distance + 50}px`; 
+arrow.style.width = `${distance + 10}px`; 
