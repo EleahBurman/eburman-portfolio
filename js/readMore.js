@@ -13,11 +13,11 @@ for (let i = 0; i < readMoreButtons.length; i++) {
     if (partialDescriptions[i].style.display === 'block') {
       partialDescriptions[i].style.display = 'none';
       fullDescriptions[i].style.display = 'block';
-      readMoreButtons[i].textContent = 'Read Less';
+      readMoreButtons[i].textContent = 'Read Less ▲';
     } else {
       partialDescriptions[i].style.display = 'block';
       fullDescriptions[i].style.display = 'none';
-      readMoreButtons[i].textContent = 'Read More';
+      readMoreButtons[i].textContent = 'Read More ▼';
     }
   });
 }
