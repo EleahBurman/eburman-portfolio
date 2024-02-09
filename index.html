@@ -132,7 +132,7 @@
         </h1>
         <p id="roles"></p>
         <div class="header-links">
-          <a class="page-link scroll" href="#projects" id="projects-button">Projects</a>
+          <a class="page-link scroll scroll-to-projects" href="#projects" id="projects-button">Projects</a>
         </div>
       </div>
     </section>
@@ -670,6 +670,24 @@
     });
     tippy('.filter-button', { 
       content: "Click to filter skills!", 
+      placement: "top",
+      animation: "perspective-extreme",
+      theme: "translucent",
+    });
+    tippy('.projects-dropdown-content', { 
+      content: "Click to see projects!", 
+      placement: "top",
+      animation: "perspective-extreme",
+      theme: "translucent",
+    });
+    tippy('.nav-link', { 
+      content: "Click to scroll!", 
+      placement: "top",
+      animation: "perspective-extreme",
+      theme: "translucent",
+    });
+    tippy('.scroll-to-projects', { 
+      content: "Click to scroll to projects!", 
       placement: "top",
       animation: "perspective-extreme",
       theme: "translucent",
