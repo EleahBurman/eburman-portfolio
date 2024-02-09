@@ -613,11 +613,24 @@
       animation: "perspective-extreme",
       theme: "translucent",
     });
-    tippy('.read-more', { 
-      content: "Click to read more!", 
+    tippy('.read-more', {
+      content: "Click to read more!",
       placement: "top",
       animation: "perspective-extreme",
       theme: "translucent",
+      onShow(instance) {
+        // Get the current click count from the element's dataset, or default to 0
+        let clickCount = parseInt(instance.reference.dataset.clickCount) || 0;
+    
+        // Increment the click count
+        clickCount++;
+    
+        // Store the new click count in the element's dataset
+        instance.reference.dataset.clickCount = clickCount;
+    
+        // Update the tooltip content based on whether the click count is odd or even
+        instance.setContent(clickCount % 2 === 0 ? 'Click to Read Less' : 'Click to Read More');
+      },
     });
     tippy('.new-screenshot', { 
       content: "Click to expand!", 
