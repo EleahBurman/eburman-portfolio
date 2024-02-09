@@ -41,7 +41,7 @@
       <a class="nav-link scroll" href="#home"><i class="fa-solid fa-house"></i> Home</a>
     </div>
     <div class="projects-dropdown">
-      <a class="nav-link dropdown-link">
+      <a class="dropdown-link">
         <i class="fa-solid fa-diagram-project"></i> Projects <i class="fas fa-chevron-down arrow"></i>
       </a>
       <div class="projects-dropdown-content">
@@ -674,8 +674,15 @@
       animation: "perspective-extreme",
       theme: "translucent",
     });
+    
+    tippy('.dropdown-link', { 
+      content: "Click to see all projects!", 
+      placement: "top",
+      animation: "perspective-extreme",
+      theme: "translucent",
+    });
     tippy('.projects-dropdown-content', { 
-      content: "Click to see projects!", 
+      content: "Click to open project!", 
       placement: "top",
       animation: "perspective-extreme",
       theme: "translucent",
