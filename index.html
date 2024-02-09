@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
+  
   <script defer src="https://kit.fontawesome.com/869241c010.js" crossorigin="anonymous"></script>
   <script defer src="./js/autocomplete.js"></script>
   <script defer src="./js/scroll.js"></script>
@@ -18,6 +19,11 @@
   <script defer src="./js/animateArrow.js"></script>
   <script defer src="./js/readMore.js"></script>
   <script defer src="./js/enlarge.js"></script>
+  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+  <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+
 
   <link
   id="favicon"
@@ -588,5 +594,43 @@
       <p class="footer-words">LinkedIn</p>
     </div>
   </div>
+  <script>
+    tippy('.github-project-img', { 
+      content: "Github Link", 
+      placement: "top",
+      animation: "perspective-extreme",
+      theme: "translucent",
+    });
+    tippy('.new-project-card-title', { 
+      content: "Click to open project!", 
+      placement: "top",
+      animation: "perspective-extreme",
+      theme: "translucent",
+    });
+    tippy('.resume-icon', { 
+      content: "Click to download resume!", 
+      placement: "top",
+      animation: "perspective-extreme",
+      theme: "translucent",
+    });
+    tippy('.read-more', { 
+      content: "Click to read more!", 
+      placement: "top",
+      animation: "perspective-extreme",
+      theme: "translucent",
+    });
+    tippy('.new-screenshot', { 
+      content: "Click to expand!", 
+      placement: "top",
+      animation: "perspective-extreme",
+      theme: "translucent",
+    });
+    tippy('.close-lightbox', { 
+      content: "Click to close!", 
+      placement: "top",
+      animation: "perspective-extreme",
+      theme: "translucent",
+    });
+  </script>
 </body>
 </html>
