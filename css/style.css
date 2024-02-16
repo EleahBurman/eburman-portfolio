@@ -1121,6 +1121,14 @@ main {
     width: 311px;
   }
 
+  .awards-card{
+    width: 311px;
+  }
+
+  .resume-card{
+    width: 311px;
+  }
+
   .last-project{
     margin-bottom: 20px;
   }
