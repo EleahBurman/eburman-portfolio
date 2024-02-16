@@ -1019,6 +1019,7 @@ main {
   left: 20%;
   width: 120px;
   height: 120px;
+  opacity: 0;
 }
 
 #pdfImage{
@@ -1045,6 +1046,11 @@ main {
   animation: arrowAnimation 2s infinite;
   left: -35px;
   bottom: 20px;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
 }
 
 .arrow-pdf-to-csv::after {
@@ -1104,6 +1110,7 @@ main {
     display: flex; /* Show the CSV image */
     width: 100px;
     height: 100px;
+    opacity: 100;
   }
 
   .flex-horizontal {
