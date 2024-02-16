@@ -170,6 +170,12 @@ if (window.matchMedia('(hover: hover)').matches) {
     animation: "perspective-extreme",
     theme: "translucent",
   });
+  tippy('#input-box', { 
+    content: "Add text here!", 
+    placement: "top",
+    animation: "perspective-extreme",
+    theme: "translucent",
+  });
 } else {
   console.log("Device does not support hover. Tooltips not initialized.");
 }
