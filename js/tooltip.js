@@ -25,10 +25,10 @@ tippy('.read-more', {
     // Check the innerHTML of the tooltip reference element
     if (instance.reference.innerHTML.includes('More')) {
       // If it contains 'More', set the tooltip content to 'Click to Read More'
-      instance.setContent('Click to Read More');
+      instance.setContent('Click to read more!');
     } else if (instance.reference.innerHTML.includes('Less')) {
       // If it contains 'Less', set the tooltip content to 'Click to Read Less'
-      instance.setContent('Click to Read Less');
+      instance.setContent('Click to read less!');
     }
   },
 });
