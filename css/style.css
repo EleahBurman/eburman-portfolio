@@ -820,6 +820,19 @@ main {
   color: var(--yellow);
 }
 
+.tmhcc{
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.tmhcc:hover{
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+.tmhcc:visited{
+  color: var(--yellow);
+}
 
 .linkedin-post:hover{
   color: white;
