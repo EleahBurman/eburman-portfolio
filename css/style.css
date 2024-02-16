@@ -820,24 +820,21 @@ main {
   color: var(--yellow);
 }
 
-.tmhcc{
+
+.tmhcc, 
+.linkedin-post{
   color: var(--yellow);
   text-decoration: none;
 }
 
-.tmhcc:hover{
+.tmhcc:hover, 
+.linkedin-post:hover{
   color: white;
   text-decoration: underline;
   text-decoration-color: white;
 }
-.tmhcc:visited{
-  color: var(--yellow);
-}
 
-.linkedin-post:hover{
-  color: white;
-}
-
+.tmhcc:visited, 
 .linkedin-post:visited{
   color: var(--yellow);
 }
