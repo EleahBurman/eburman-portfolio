@@ -88,11 +88,24 @@ tippy('.filter-button', {
   theme: "translucent",
 });
 
-tippy('.dropdown-link', { 
-  content: "Click to see all projects!", 
+tippy('.dropdown-link', {
+  content: "Click to see all projects",
   placement: "top",
   animation: "perspective-extreme",
   theme: "translucent",
+  onShow(instance) {
+    // Get the .projects-dropdown-content element
+    const dropdownContent = document.querySelector('.projects-dropdown-content');
+
+    // Check the display property of the .projects-dropdown-content element
+    if (window.getComputedStyle(dropdownContent).display === 'block') {
+      // If it's 'block', set the tooltip content to 'Click to Hide All Projects'
+      instance.setContent('Click to hide all projects!');
+    } else {
+      // Otherwise, set the tooltip content to 'Click to See All Projects'
+      instance.setContent('Click to see all projects!');
+    }
+  },
 });
 tippy('.projects-dropdown-content', { 
   content: "Click to open project!", 
