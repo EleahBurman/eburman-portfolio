@@ -143,3 +143,23 @@ tippy('.scroll-to-projects', {
   animation: "perspective-extreme",
   theme: "translucent",
 });
+tippy('.linkedin', { 
+  content: "Click to open LinkedIn!", 
+  placement: "top",
+  animation: "perspective-extreme",
+  theme: "translucent",
+});
+
+tippy('.github', { 
+  content: "Click to open GitHub!", 
+  placement: "top",
+  animation: "perspective-extreme",
+  theme: "translucent",
+});
+
+tippy('.email', { 
+  content: "Click to email Eleah!", 
+  placement: "top",
+  animation: "perspective-extreme",
+  theme: "translucent",
+});
