@@ -1,5 +1,5 @@
 /*------------ Constants ------------*/
-const roles = ['Software Engineer', 'Full Stack Developer', 'Problem Solver', 'Coffee-Enthusiast', 'Gamer', 'Cat Mom', 'Dog Mom'];
+const roles = ['Software Engineer', 'Full-Stack Developer', 'Problem Solver', 'Coffee-Enthusiast', 'Gamer', 'Cat Mom', 'Dog Mom'];
 
 /*------------ Variables ------------*/
 let index = 0;
