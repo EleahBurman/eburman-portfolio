@@ -59,13 +59,17 @@ if (window.matchMedia('(hover: hover)').matches) {
     theme: "translucent",
   });
   tippy('.search-button-init', { 
-    content: "Click to search!", 
+    content: "Click to open search!", 
     placement: "top",
     animation: "perspective-extreme",
     theme: "translucent",
   });
   tippy('.search-button', { 
-    content: "Click to search!", 
+    onShow(instance) {
+      const inputBox = document.querySelector('#input-box');
+      const inputValue = inputBox ? inputBox.value : '';
+      instance.setContent(`Click to search ${inputValue}!`);
+    },
     placement: "top",
     animation: "perspective-extreme",
     theme: "translucent",
