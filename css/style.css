@@ -1146,6 +1146,16 @@ main {
   }
 }
 
+@media (max-width: 1200px) {
+  .nav-text {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1050px) {
+  .nav-text {
+    display: none;
+  }
+}
 
 @media screen and (max-width: 768px) {
 
