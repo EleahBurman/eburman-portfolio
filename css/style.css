@@ -821,7 +821,7 @@ main {
   box-shadow: 0px 0px 2px 2px rgb(255, 255, 255);
 }
 
-#backend, #fullstack, #python{
+#swe{
   color: var(--yellow);
   font-style: italic;
 }
