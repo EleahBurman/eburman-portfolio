@@ -113,11 +113,29 @@ tippy('.projects-dropdown-content', {
   animation: "perspective-extreme",
   theme: "translucent",
 });
-tippy('.nav-link', { 
-  content: "Click to scroll!", 
+
+tippy('.nav-link', {
+  content: "Click to scroll!",
   placement: "top",
   animation: "perspective-extreme",
   theme: "translucent",
+  onShow(instance) {
+    // Check the innerHTML of the tooltip reference element
+    const innerHTML = instance.reference.innerHTML;
+    if (innerHTML.includes('Home')) {
+      instance.setContent('Click to scroll to top!');
+    } else if (innerHTML.includes('Skills')) {
+      instance.setContent('Click to scroll to skills!');
+    } else if (innerHTML.includes('Work')) {
+      instance.setContent('Click to scroll to work!');
+    } else if (innerHTML.includes('Awards')) {
+      instance.setContent('Click to scroll to awards!');
+    } else if (innerHTML.includes('Resume')) {
+      instance.setContent('Click to scroll to resume!');
+    } else if (innerHTML.includes('About')) {
+      instance.setContent('Click to scroll to about!');
+    }
+  },
 });
 tippy('.scroll-to-projects', { 
   content: "Click to scroll to projects!", 
