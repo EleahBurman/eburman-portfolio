@@ -164,6 +164,12 @@ if (window.matchMedia('(hover: hover)').matches) {
     animation: "perspective-extreme",
     theme: "translucent",
   });
+  tippy('.clear-button', { 
+    content: "Click to clear!", 
+    placement: "top",
+    animation: "perspective-extreme",
+    theme: "translucent",
+  });
 } else {
   console.log("Device does not support hover. Tooltips not initialized.");
 }
