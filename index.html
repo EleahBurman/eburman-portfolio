@@ -619,17 +619,14 @@
       animation: "perspective-extreme",
       theme: "translucent",
       onShow(instance) {
-        // Get the current click count from the element's dataset, or default to 0
-        let clickCount = parseInt(instance.reference.dataset.clickCount) || 0;
-    
-        // Increment the click count
-        clickCount++;
-    
-        // Store the new click count in the element's dataset
-        instance.reference.dataset.clickCount = clickCount;
-    
-        // Update the tooltip content based on whether the click count is odd or even
-        instance.setContent(clickCount % 2 === 0 ? 'Click to read less!' : 'Click to read more!');
+        // Check the innerHTML of the tooltip reference element
+        if (instance.reference.innerHTML.includes('More')) {
+          // If it contains 'More', set the tooltip content to 'Click to Read More'
+          instance.setContent('Click to Read More');
+        } else if (instance.reference.innerHTML.includes('Less')) {
+          // If it contains 'Less', set the tooltip content to 'Click to Read Less'
+          instance.setContent('Click to Read Less');
+        }
       },
     });
     tippy('.new-screenshot', { 
