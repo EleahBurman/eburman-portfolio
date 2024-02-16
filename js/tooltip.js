@@ -1,5 +1,5 @@
 tippy('.github-project-img', { 
-  content: "Github Link", 
+  content: "Click to open GitHub!", 
   placement: "top",
   animation: "perspective-extreme",
   theme: "translucent",
