@@ -176,6 +176,21 @@ if (window.matchMedia('(hover: hover)').matches) {
     animation: "perspective-extreme",
     theme: "translucent",
   });
+  document.querySelectorAll('.result-box').forEach((element) => {
+    tippy(element, { 
+      onShow(instance) {
+        const liElement = element.querySelector('li');
+        if (liElement) {
+          const iconElement = liElement.querySelector('.fa');
+          const textContent = iconElement ? liElement.textContent.replace(iconElement.textContent, '') : liElement.textContent;
+          instance.setContent(`Search ${textContent.trim()}!`);
+        }
+      },
+      placement: "top",
+      animation: "perspective-extreme",
+      theme: "translucent",
+    });
+  });
 } else {
   console.log("Device does not support hover. Tooltips not initialized.");
 }
