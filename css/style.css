@@ -815,6 +815,10 @@ main {
   margin: auto;
 }
 
+.hackathon-title{
+  font-size: 20px;
+  margin: 0;
+}
 .new-project-card-title{
   font-size:36px;
   margin-left: 6px;
@@ -1163,6 +1167,10 @@ main {
 @media (max-width: 1050px) {
   .nav-text {
     display: none;
+  }
+  .hackathon-title{
+    font-size: 14px;
+    margin: 0;
   }
 }
 
