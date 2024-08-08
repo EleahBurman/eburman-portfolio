@@ -1,12 +1,19 @@
 if (window.matchMedia('(hover: hover)').matches) {
   tippy('.github-project-img', { 
-  content: "Click to open GitHub!", 
-  placement: "top",
-  animation: "perspective-extreme",
-  theme: "translucent",
+    content: (reference) => {
+      const projectTitle = reference.closest('.project-card').querySelector('.new-project-card-title').textContent.trim();
+      return `Click to open ${projectTitle} on GitHub!`;
+    },
+    placement: "top",
+    animation: "perspective-extreme",
+    theme: "translucent",
   });
+
   tippy('.new-project-card-title', { 
-    content: "Click to open project!", 
+    content: (reference) => {
+      const projectTitle = reference.textContent.trim();
+      return `Click to open ${projectTitle}!`;
+    },
     placement: "top",
     animation: "perspective-extreme",
     theme: "translucent",
@@ -62,7 +69,8 @@ if (window.matchMedia('(hover: hover)').matches) {
     content: "Click to open search!", 
     placement: "top",
     animation: "perspective-extreme",
-    theme: "translucent",
+    theme: "custom",
+    arrow: false,
   });
   tippy('.search-button', { 
     onShow(instance) {
@@ -72,7 +80,7 @@ if (window.matchMedia('(hover: hover)').matches) {
     },
     placement: "top",
     animation: "perspective-extreme",
-    theme: "translucent",
+    theme: "custom",
   });
   tippy('#top', { 
     content: "Scroll to top!", 
