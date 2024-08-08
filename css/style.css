@@ -1380,7 +1380,23 @@ main {
     to {
       transform: translateX(0);
     }
-  }  
+  }
+
+  /* Keyframes for sliding out */
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+/* When the menu is deactivated, slide it out */
+.nav-mobile.is-deactivating {
+  animation: slideOut 0.4s forwards;
+  display: block;
+}
 
   .nav-mobile a{
     display: block;
