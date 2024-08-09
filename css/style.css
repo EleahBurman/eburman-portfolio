@@ -1181,6 +1181,9 @@ main {
     display: none;
   }
   
+  #caffeinate-me-card{
+    height:fit-content
+  }
   .project-card{
     width: 311px;
     height: 311px;
