@@ -1181,7 +1181,8 @@ main {
     display: none;
   }
   
-  #caffeinate-me-card{
+  #caffeinate-me-card, 
+  #portfolio-card{
     height:fit-content
   }
   .project-card{
