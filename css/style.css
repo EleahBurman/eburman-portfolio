@@ -1059,6 +1059,10 @@ main {
   transform: translate(-50%, -50%);
 }
 
+.solid-line {
+  margin-right: 5%;
+  margin-left: 5%;
+}
 .arrow-pdf-to-csv {
   position: relative; /* Make the arrow's position relative for the pseudo-element */
   width: 5%;
