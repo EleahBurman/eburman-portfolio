@@ -1061,7 +1061,7 @@ main {
 
 .arrow-pdf-to-csv {
   position: relative; /* Make the arrow's position relative for the pseudo-element */
-  width: 20px;
+  width: 5%;
   height: 10px;
   background-color: yellow;
   transform-origin: 0 50%;
