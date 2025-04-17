@@ -162,7 +162,23 @@ document.addEventListener('DOMContentLoaded', function() {
   function addMessage(text, sender) {
     const messageDiv = document.createElement('div');
     messageDiv.className = sender === 'user' ? 'user-message' : 'bot-message';
-    messageDiv.innerHTML = text;
+    
+    // Add avatar for bot messages
+    if (sender === 'bot') {
+      const messageContent = document.createElement('div');
+      messageContent.className = 'message-content';
+      messageContent.innerHTML = text;
+      
+      const avatarDiv = document.createElement('div');
+      avatarDiv.className = 'bot-avatar';
+      
+      messageDiv.appendChild(avatarDiv);
+      messageDiv.appendChild(messageContent);
+    } else {
+      // For user messages, just add the text
+      messageDiv.innerHTML = text;
+    }
+    
     chatMessages.appendChild(messageDiv);
     chatMessages.scrollTop = chatMessages.scrollHeight;
   }

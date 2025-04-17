@@ -1320,6 +1320,36 @@ main {
   background-color: var(--lightteal);
   color: white;
 }
+
+/* Updated Bot avatar and message styling */
+.bot-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.bot-avatar {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 50%;
+  background-image: url('../assets/images/eleahburman-cartoon.jpg');
+  background-size: cover;
+  background-position: center;
+  border: 2px solid var(--teal);
+  margin-top: 0; /* Ensure no top margin */
+}
+
+.message-content {
+  background-color: #f0f0f0;
+  padding: 10px 15px;
+  border-radius: 10px;
+  max-width: calc(100% - 50px);
+  color: #333;
+  margin-top: 0px;
+  padding: 0px;
+  align-self: center;
+}
 @media screen and (max-width: 1300px) {
   #csvImage {
     display: flex; /* Show the CSV image */
