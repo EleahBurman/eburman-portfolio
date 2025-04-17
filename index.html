@@ -20,6 +20,7 @@
   <script defer src="./js/readMore.js"></script>
   <script defer src="./js/enlarge.js"></script>
   <script defer src="./js/tooltip.js"></script>
+  <script defer src="./js/chatbot.js"></script>
   <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
   <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
   <script src="https://unpkg.com/@popperjs/core@2"></script>
@@ -670,5 +671,30 @@
       <p class="footer-words">LinkedIn</p>
     </div>
   </div>
+
+<!-- Chatbot Container -->
+<div id="portfolio-chatbot" class="chatbot-container">
+  <div class="chatbot-header">
+    <span>Ask Me About Eleah Burman</span>
+    <button id="minimize-chat">−</button>
+  </div>
+  <div class="chatbot-messages" id="chatMessages">
+    <div class="bot-message">
+      Hi! I can answer questions about Eleah's skills and projects. You can type a question or click one of the options below:
+    </div>
+  </div>
+  <div class="chatbot-input">
+    <input type="text" id="chatInput" placeholder="Ask a question...">
+    <button id="sendMessage"><i class="fa-solid fa-paper-plane"></i></button>
+  </div>
+</div>
+
+<!-- Floating chat button - replace the existing scroll-to-top button -->
+<div class="floating-buttons">
+  <button id="open-chat" class="chat-button">
+    <i class="fa-solid fa-comments"></i>
+  </button>
+  <a class="page-link scroll chat-top-button" href="#home">&#x2191;</a>
+</div>
 </body>
 </html>
