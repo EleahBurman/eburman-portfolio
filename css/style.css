@@ -26,6 +26,7 @@ body {
   font-family: Barlow, sans-serif;
 }
 
+
 .project-new-icon{
   width: 20.25;
   height: 18.5;
@@ -1132,6 +1133,9 @@ main {
   display:none;
 }
 
+.first-card {
+  width: 584px; /* Or the exact width of your Budget Buddy card */
+}
 @media screen and (max-width: 1300px) {
   #csvImage {
     display: flex; /* Show the CSV image */
