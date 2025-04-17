@@ -1350,6 +1350,10 @@ main {
   padding: 0px;
   align-self: center;
 }
+
+#chatInput::placeholder {
+  color: lightgray;
+}
 @media screen and (max-width: 1300px) {
   #csvImage {
     display: flex; /* Show the CSV image */
