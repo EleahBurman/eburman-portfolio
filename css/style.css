@@ -1133,7 +1133,7 @@ main {
   display:none;
 }
 
-.first-card {
+.first-card, .project-card {
   width: 584px; /* Or the exact width of your Budget Buddy card */
 }
 
