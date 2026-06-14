@@ -58,6 +58,13 @@ document.addEventListener('DOMContentLoaded', function() {
         deployed: 'https://disputeiq-zeta.vercel.app'
       },
       {
+        name: 'Resume Keyword Matcher',
+        languages: ['Python', 'Flask', 'NLTK', 'spaCy'],
+        features: ['NLP Keyword Extraction', 'Fuzzy Matching', 'Compatibility Scoring', 'Resume Analysis'],
+        github: 'https://github.com/EleahBurman/resume-keyword-matcher',
+        deployed: 'https://resume-keyword-matcher-zj7l.onrender.com'
+      },
+      {
         name: 'Skillz Hunter',
         languages: ['Java'],
         features: ['API consumption', 'Dependency Injection', 'Observer Pattern', 'Levenshtein Distance Algorithm', 'Salary Visualization'],
