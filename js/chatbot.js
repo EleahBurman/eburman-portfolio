@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
     databases: ['MongoDB', 'PostgreSQL'],
     tools: ['Docker', 'Git', 'VS Code', 'AWS', 'Azure', 'JWT', 'MUI', 'Vite'],
     pythonQuestions: [
+      "Tell me about DisputeIQ",
       "Tell me about Drag Queen Collector",
       "How does Eleah use Python day-to-day?",
       "How does Eleah use Python at TMHCC?"
@@ -49,6 +50,13 @@ document.addEventListener('DOMContentLoaded', function() {
       "Tell me about Drag Queen Collector"
     ],
     projects: [
+      {
+        name: 'DisputeIQ',
+        languages: ['Python', 'React', 'FastAPI', 'LightGBM'],
+        features: ['Anthropic Claude API', 'LLM-powered extraction', 'Prompt Engineering', 'PDF Processing', 'Gradient Boosted Classification'],
+        github: 'https://github.com/EleahBurman/disputeiq',
+        deployed: 'https://disputeiq-zeta.vercel.app'
+      },
       {
         name: 'Skillz Hunter',
         languages: ['Java'],
@@ -106,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
       "What languages does Eleah code in?",
       "Which projects use APIs?",
       "What projects are full-stack?",
-      "Tell me about Skillz Hunter",
+      "Tell me about DisputeIQ",
       "Show me all GitHub links"
     ]);
   }
@@ -512,6 +520,14 @@ document.addEventListener('DOMContentLoaded', function() {
       return response;
     }
     
+    if (message.includes('disputeiq') || message.includes('dispute')) {
+      const project = portfolioData.projects.find(p => p.name === 'DisputeIQ');
+      let response = `${project.name} is an AI-powered dispute evidence processing pipeline built with ${project.languages.join(', ')}. `;
+      response += `Features include: ${project.features.join(', ')}. `;
+      response += `<a href="${project.github}" target="_blank">View on GitHub</a> | `;
+      response += `<a href="${project.deployed}" target="_blank">Live Demo</a>`;
+      return response;
+    }
     // Default response
     return `I can tell you about Eleah's coding skills and projects. Try asking about:
     <ul>
