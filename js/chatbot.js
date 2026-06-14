@@ -29,23 +29,19 @@ document.addEventListener('DOMContentLoaded', function() {
     ],
     javascriptQuestions: [
       "Tell me about Budget Buddy",
-      "Tell me about Caffeinate Me",
-      "Tell me about Bite Buddy",
-      "Tell me about Cat Vs Cat Lady",
-      "Tell me about Rainbow Words"
+      "Tell me about Caffeinate Me"
     ],
     reactQuestions: [
-      "Tell me about Budget Buddy",
-      "Tell me about Bite Buddy"
+      "Tell me about DisputeIQ",
+      "Tell me about Budget Buddy"
     ],
     apiQuestions: [
-      "Github for Skillz Hunter?", 
-      "Github for Bite Buddy?", 
+      "Github for Skillz Hunter?",
       "Why Eleah likes to consume APIs?"
     ],
     fullStackQuestions: [
+      "Tell me about DisputeIQ",
       "Tell me about Budget Buddy",
-      "Tell me about Bite Buddy",
       "Tell me about Caffeinate Me",
       "Tell me about Drag Queen Collector"
     ],
@@ -87,24 +83,6 @@ document.addEventListener('DOMContentLoaded', function() {
         languages: ['JavaScript', 'Express', 'MongoDB', 'Node.js'],
         features: ['Google OAuth', 'Cafe Reviews', 'Profile Customization'],
         github: 'https://github.com/EleahBurman/caffeinate-me'
-      },
-      {
-        name: 'Bite Buddy',
-        languages: ['JavaScript', 'React', 'MongoDB', 'Node.js'],
-        features: ['API Consumption', 'Recipe Boards', 'Allergy Specifications'],
-        github: 'https://github.com/EleahBurman/bite-buddy-front-end'
-      },
-      {
-        name: 'Cat Vs Cat Lady',
-        languages: ['JavaScript', 'HTML', 'CSS'],
-        features: ['Game Logic', 'Animation Effects'],
-        github: 'https://github.com/EleahBurman/cat-catlady'
-      },
-      {
-        name: 'Rainbow Words',
-        languages: ['JavaScript', 'HTML', 'CSS'],
-        features: ['Word Search Game', 'Achievement System'],
-        github: 'https://github.com/EleahBurman/rainbowwords'
       }
     ]
   };
@@ -348,7 +326,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (message.includes('full-stack') || message.includes('fullstack')) {
       const fullStackProjects = portfolioData.projects.filter(p => 
         (p.languages.some(l => l.toLowerCase() === 'react' || l.toLowerCase() === 'javascript') &&
-         (p.languages.some(l => l.toLowerCase() === 'express' || l.toLowerCase() === 'node.js' || l.toLowerCase() === 'mongodb' || l.toLowerCase() === 'django' || l.toLowerCase() === 'postgresql')))
+         (p.languages.some(l => l.toLowerCase() === 'express' || l.toLowerCase() === 'node.js' || l.toLowerCase() === 'mongodb' || l.toLowerCase() === 'django' || l.toLowerCase() === 'postgresql' || l.toLowerCase() === 'fastapi')))
       );
       
       let response = `Eleah's full-stack projects include: ${fullStackProjects.map(p => p.name).join(', ')}. These projects showcase her ability to work with both frontend and backend technologies.`;
@@ -409,10 +387,6 @@ document.addEventListener('DOMContentLoaded', function() {
       return `<a href="${portfolioData.projects[0].github}" target="_blank">Check out the Skillz Hunter project on GitHub</a>`;
     }
     
-    if (message.toLowerCase().includes('github for bite buddy')) {
-      const project = portfolioData.projects.find(p => p.name.toLowerCase() === 'bite buddy');
-      return `<a href="${project.github}" target="_blank">Check out the Bite Buddy project on GitHub</a>`;
-    }
     
     // Check for Java projects
     if (message.includes('projects') && message.includes('java')) {
@@ -468,37 +442,6 @@ document.addEventListener('DOMContentLoaded', function() {
       return response;
     }
     
-    if (message.includes('bite buddy')) {
-      const project = portfolioData.projects.find(p => p.name === 'Bite Buddy');
-      let response = `${project.name} is built with ${project.languages.join(', ')}. `;
-      response += `Features include: ${project.features.join(', ')}. `;
-      response += `<a href="${project.github}" target="_blank">View on GitHub</a>`;
-      
-      // Show other JavaScript/full-stack/React projects
-      if (portfolioData.javascriptQuestions.includes('Tell me about Bite Buddy')) {
-        addFilteredQuickQuestionButtons('javascriptQuestions', 'Tell me about Bite Buddy');
-      } else if (portfolioData.reactQuestions.includes('Tell me about Bite Buddy')) {
-        addFilteredQuickQuestionButtons('reactQuestions', 'Tell me about Bite Buddy');
-      } else if (portfolioData.fullStackQuestions.includes('Tell me about Bite Buddy')) {
-        addFilteredQuickQuestionButtons('fullStackQuestions', 'Tell me about Bite Buddy');
-      }
-      
-      return response;
-    }
-    
-    if (message.includes('cat') && message.includes('cat lady')) {
-      const project = portfolioData.projects.find(p => p.name === 'Cat Vs Cat Lady');
-      let response = `${project.name} is built with ${project.languages.join(', ')}. `;
-      response += `Features include: ${project.features.join(', ')}. `;
-      response += `This is a fun game where you can play against the computer! `;
-      response += `<a href="${project.github}" target="_blank">View on GitHub</a>`;
-      
-      // Show other JavaScript projects
-      addFilteredQuickQuestionButtons('javascriptQuestions', 'Tell me about Cat Vs Cat Lady');
-      
-      return response;
-    }
-    
     if (message.includes('caffeinate me')) {
       const project = portfolioData.projects.find(p => p.name === 'Caffeinate Me');
       let response = `${project.name} is built with ${project.languages.join(', ')}. `;
@@ -511,18 +454,6 @@ document.addEventListener('DOMContentLoaded', function() {
       } else if (portfolioData.fullStackQuestions.includes('Tell me about Caffeinate Me')) {
         addFilteredQuickQuestionButtons('fullStackQuestions', 'Tell me about Caffeinate Me');
       }
-      
-      return response;
-    }
-    
-    if (message.includes('rainbow words')) {
-      const project = portfolioData.projects.find(p => p.name === 'Rainbow Words');
-      let response = `${project.name} is built with ${project.languages.join(', ')}. `;
-      response += `Features include: ${project.features.join(', ')}. `;
-      response += `<a href="${project.github}" target="_blank">View on GitHub</a>`;
-      
-      // Show other JavaScript projects
-      addFilteredQuickQuestionButtons('javascriptQuestions', 'Tell me about Rainbow Words');
       
       return response;
     }
