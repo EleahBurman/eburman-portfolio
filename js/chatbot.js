@@ -54,6 +54,13 @@ document.addEventListener('DOMContentLoaded', function() {
         deployed: 'https://disputeiq-zeta.vercel.app'
       },
       {
+        name: 'ClinicalNote AI',
+        languages: ['Python', 'React', 'TypeScript', 'FastAPI'],
+        features: ['Anthropic Claude API', 'LLM-powered summarization', 'Prompt Engineering', 'Clinical NLP', 'Structured Output Generation'],
+        github: 'https://github.com/EleahBurman/clinicalnote-ai',
+        deployed: 'https://clinicalnote-ai.vercel.app'
+      },
+      {
         name: 'Resume Keyword Matcher',
         languages: ['Python', 'Flask', 'NLTK', 'spaCy'],
         features: ['NLP Keyword Extraction', 'Fuzzy Matching', 'Compatibility Scoring', 'Resume Analysis'],
@@ -461,6 +468,14 @@ document.addEventListener('DOMContentLoaded', function() {
     if (message.includes('disputeiq') || message.includes('dispute')) {
       const project = portfolioData.projects.find(p => p.name === 'DisputeIQ');
       let response = `${project.name} is an AI-powered dispute evidence processing pipeline built with ${project.languages.join(', ')}. `;
+      response += `Features include: ${project.features.join(', ')}. `;
+      response += `<a href="${project.github}" target="_blank">View on GitHub</a> | `;
+      response += `<a href="${project.deployed}" target="_blank">Live Demo</a>`;
+      return response;
+    }
+    if (message.includes('clinicalnote') || message.includes('clinical note')) {
+      const project = portfolioData.projects.find(p => p.name === 'ClinicalNote AI');
+      let response = `${project.name} is an AI-powered clinical session note summarization tool built with ${project.languages.join(', ')}. `;
       response += `Features include: ${project.features.join(', ')}. `;
       response += `<a href="${project.github}" target="_blank">View on GitHub</a> | `;
       response += `<a href="${project.deployed}" target="_blank">Live Demo</a>`;
